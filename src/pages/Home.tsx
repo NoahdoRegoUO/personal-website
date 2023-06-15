@@ -24,7 +24,7 @@ function Home() {
                 'Writer',
                 750,
                 'Self-proclaimed dingus',
-                750
+                2000
             ]}
             wrapper="span"
             speed={50}

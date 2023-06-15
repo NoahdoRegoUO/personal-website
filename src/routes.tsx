@@ -16,6 +16,8 @@ const router = createBrowserRouter([
         },
       ]
     }
-]);
+], {
+  basename: "/personal-website",
+});
 
 export default router;

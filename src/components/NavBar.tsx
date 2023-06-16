@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate, Outlet } from "react-router-dom";
 import {
   Navbar,
@@ -21,6 +21,8 @@ import {
   Square3Stack3DIcon,
   WrenchIcon,
   HomeIcon,
+  MoonIcon,
+  SunIcon,
 } from "@heroicons/react/24/outline";
 import { LuChefHat, LuGamepad2 } from "react-icons/lu";
 import { BsGlobe } from "react-icons/bs";
@@ -89,7 +91,7 @@ function NavListMenu() {
   );
 
   return (
-    <React.Fragment>
+    <>
       <Menu
         open={isMenuOpen}
         handler={setIsMenuOpen}
@@ -133,7 +135,7 @@ function NavListMenu() {
       <div className="block md:hidden">
         <Collapse open={isMobileMenuOpen}>{renderItems}</Collapse>
       </div>
-    </React.Fragment>
+    </>
   );
 }
 
@@ -189,7 +191,8 @@ function NavList() {
 }
 
 export default function MainNavBar() {
-  const [openNav, setOpenNav] = React.useState(false);
+  const [openNav, setOpenNav] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const navigate = useNavigate();
 
   React.useEffect(() => {
@@ -202,16 +205,29 @@ export default function MainNavBar() {
   return (
     <>
       <Navbar className="max-w-full px-4 py-2 rounded-none border-none bg-gradient-to-r from-green-300 to-blue-200">
-        <div className="flex items-center justify-between text-blue-gray-900">
-          <Typography
-            as="a"
-            href="#"
-            variant="h6"
-            className="mr-4 cursor-pointer py-1.5 ml-2"
-            onClick={() => navigate("/")}
-          >
-            <BsGlobe className="h-[30px] w-[30px]" />
-          </Typography>
+        <div className="flex items-center justify-between text-blue-gray-900 select-none">
+          <div className="flex items-start">
+            <Typography
+              as="a"
+              href="#"
+              variant="h6"
+              className="mr-4 cursor-pointer py-1.5 ml-2"
+              onClick={() => navigate("/")}
+            >
+              <BsGlobe className="h-[30px] w-[30px]" />
+            </Typography>
+            <Typography
+              variant="h6"
+              className="mr-4 cursor-pointer py-1.5 ml-2"
+              onClick={() => setDarkMode(!darkMode)}
+            >
+              {darkMode ? (
+                <SunIcon className="h-[30px] w-[30px]" />
+              ) : (
+                <MoonIcon className="h-[30px] w-[30px]" />
+              )}
+            </Typography>
+          </div>
           <div className="hidden md:block">
             <NavList />
           </div>

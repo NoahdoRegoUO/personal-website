@@ -1,9 +1,4 @@
-import {
-  Typography,
-  Card,
-  CardBody,
-  CardFooter,
-} from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 import { TypeAnimation } from "react-type-animation";
 
 function Home() {

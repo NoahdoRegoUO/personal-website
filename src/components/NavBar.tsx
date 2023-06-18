@@ -14,7 +14,6 @@ import {
 } from "@material-tailwind/react";
 import {
   ChevronDownIcon,
-  UserCircleIcon,
   Bars3Icon,
   XMarkIcon,
   BookOpenIcon,
@@ -42,20 +41,23 @@ const navListMenuItems = [
   {
     color: "blue",
     icon: BookOpenIcon,
-    title: "Articles",
+    title: "Blog",
     description: "Incoherent writing covering various topics.",
+    page: "blog",
   },
   {
     color: "orange",
     icon: LuGamepad2,
     title: "Games",
     description: 'My "polished" Unity games.',
+    page: "games",
   },
   {
     color: "purple",
     icon: LuChefHat,
     title: "Recipes",
     description: "Some food that I've thrown together.",
+    page: "recipes",
   },
 ];
 
@@ -64,8 +66,8 @@ function NavListMenu() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   const renderItems = navListMenuItems.map(
-    ({ icon, title, description, color }, key) => (
-      <a href="#" key={key}>
+    ({ icon, title, description, color, page }, key) => (
+      <a href={page} key={key}>
         <MenuItem className="flex items-center gap-3 rounded-lg">
           <div className={`rounded-lg p-5 ${colors[color]}`}>
             {React.createElement(icon, {
@@ -140,17 +142,14 @@ function NavListMenu() {
 }
 
 function NavList() {
-  const navigate = useNavigate();
-
   return (
     <List className="mt-4 mb-6 p-0 md:mt-0 md:mb-0 md:flex-row md:p-1">
       <Typography
         as="a"
-        href="#"
+        href="/#"
         variant="small"
         color="blue-gray"
         className="font-semibold"
-        onClick={() => navigate("/")}
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
           <HomeIcon className="h-[18px] w-[18px]" />
@@ -160,11 +159,10 @@ function NavList() {
 
       <Typography
         as="a"
-        href="#"
+        href="projects"
         variant="small"
         color="blue-gray"
         className="font-semibold"
-        onClick={() => navigate("/projects")}
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
           <WrenchIcon className="h-[18px] w-[18px]" />
@@ -173,19 +171,6 @@ function NavList() {
       </Typography>
 
       <NavListMenu />
-
-      <Typography
-        as="a"
-        href="#"
-        variant="small"
-        color="blue-gray"
-        className="font-semibold"
-      >
-        <ListItem className="flex items-center gap-2 py-2 pr-4">
-          <UserCircleIcon className="h-[18px] w-[18px]" />
-          Contact Me
-        </ListItem>
-      </Typography>
     </List>
   );
 }
@@ -209,7 +194,7 @@ export default function MainNavBar() {
           <div className="flex items-start">
             <Typography
               as="a"
-              href="#"
+              href="/#"
               variant="h6"
               className="mr-4 cursor-pointer py-1.5 ml-2"
               onClick={() => navigate("/")}

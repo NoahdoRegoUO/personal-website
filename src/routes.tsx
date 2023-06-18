@@ -1,23 +1,45 @@
 import { createBrowserRouter } from "react-router-dom";
-import { HomePage, NavBar } from "./index.ts";
+import {
+  BlogPage,
+  GamesPage,
+  HomePage,
+  NavBar,
+  ProjectsPage,
+  RecipesPage,
+} from "./index.ts";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
     {
       path: "/",
       element: <NavBar />,
       children: [
         {
           path: "/",
-          element: <HomePage />
+          element: <HomePage />,
         },
         {
-          path: "/home",
-          element: <HomePage />
+          path: "/projects",
+          element: <ProjectsPage />,
         },
-      ]
-    }
-], {
-  basename: "/personal-website/",
-});
+        {
+          path: "/blog",
+          element: <BlogPage />,
+        },
+        {
+          path: "/games",
+          element: <GamesPage />,
+        },
+        {
+          path: "/recipes",
+          element: <RecipesPage />,
+        },
+      ],
+    },
+  ],
+  {
+    basename: "/personal-website/",
+  }
+);
 
 export default router;

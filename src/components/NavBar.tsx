@@ -14,7 +14,6 @@ import {
 } from "@material-tailwind/react";
 import {
   ChevronDownIcon,
-  UserCircleIcon,
   Bars3Icon,
   XMarkIcon,
   BookOpenIcon,
@@ -173,19 +172,6 @@ function NavList() {
       </Typography>
 
       <NavListMenu />
-
-      <Typography
-        as="a"
-        href="#"
-        variant="small"
-        color="blue-gray"
-        className="font-semibold"
-      >
-        <ListItem className="flex items-center gap-2 py-2 pr-4">
-          <UserCircleIcon className="h-[18px] w-[18px]" />
-          Contact Me
-        </ListItem>
-      </Typography>
     </List>
   );
 }

@@ -41,7 +41,7 @@ const navListMenuItems = [
   {
     color: "blue",
     icon: BookOpenIcon,
-    title: "Articles",
+    title: "Blog",
     description: "Incoherent writing covering various topics.",
   },
   {

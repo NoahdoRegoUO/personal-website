@@ -13,15 +13,15 @@ function Home() {
             <TypeAnimation
               sequence={[
                 // Same substring at the start will only be typed out once, initially
-                "University Student",
+                "University Student ",
                 1500, // wait 1s before replacing "Mice" with "Hamsters"
-                "Developer",
+                "Developer ",
                 1500,
-                "Designer",
+                "Designer ",
                 1500,
-                "Writer",
+                "Writer ",
                 1500,
-                "Self-proclaimed dingus",
+                "Self-proclaimed dingus ",
                 1500,
               ]}
               wrapper="span"

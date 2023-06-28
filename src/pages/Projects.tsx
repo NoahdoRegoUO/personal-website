@@ -1,5 +1,7 @@
+import { CardGrid } from "../index.ts";
+
 function Projects() {
-  return <>Projects</>;
+  return <CardGrid></CardGrid>;
 }
 
 export default Projects;

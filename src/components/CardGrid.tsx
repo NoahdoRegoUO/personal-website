@@ -1,30 +1,28 @@
-//import { useState } from "react";
 import {
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
   Typography,
 } from "@material-tailwind/react";
+import bookerImage from "../assets/images/projects/booker.png";
 
 const testData = [
   {
-    title: "Booker",
+    title: "OneDay",
     image:
       "https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+    desc: "A minimalist, simplified daily planner app made with React Native",
+  },
+  {
+    title: "Booker",
+    image: bookerImage,
     desc: "A fullstack application for booking hotels made with a friend as a university project",
   },
   {
-    title: "Booker",
+    title: "Trend",
     image:
       "https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
-    desc: "A fullstack application for booking hotels",
-  },
-  {
-    title: "Booker",
-    image:
-      "https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
-    desc: "A fullstack application for booking hotels",
+    desc: "A mobile app that displays trending content from other platforms made with React Native",
   },
   {
     title: "Booker",
@@ -40,12 +38,12 @@ function CardGrid() {
       {testData.map((card) => {
         return (
           <Card className="">
-            <CardHeader
-              floated={false}
-              color="blue-gray"
-              className="relative h-56"
-            >
-              <img src={card.image} alt="img-blur-shadow" />
+            <CardHeader floated={false} color="blue-gray" className="relative">
+              <img
+                className="object-cover aspect-[6/4]"
+                src={card.image}
+                alt="img-blur-shadow"
+              />
             </CardHeader>
             <CardBody>
               <Typography variant="h5" color="blue-gray" className="mb-2">

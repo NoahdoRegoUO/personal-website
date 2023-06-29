@@ -5,12 +5,14 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import bookerImage from "../assets/images/projects/booker.png";
+import onedayImage from "../assets/images/projects/oneday.png";
+import trendImage from "../assets/images/projects/trend.jpg";
+import personalWebsiteImage from "../assets/images/projects/personal-website.jpg";
 
 const testData = [
   {
     title: "OneDay",
-    image:
-      "https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+    image: onedayImage,
     desc: "A minimalist, simplified daily planner app made with React Native",
   },
   {
@@ -20,15 +22,13 @@ const testData = [
   },
   {
     title: "Trend",
-    image:
-      "https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+    image: trendImage,
     desc: "A mobile app that displays trending content from other platforms made with React Native",
   },
   {
-    title: "Booker",
-    image:
-      "https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
-    desc: "A fullstack application for booking hotels",
+    title: "Personal Website",
+    image: personalWebsiteImage,
+    desc: "My personal website (yes, this one) made with Vite + React, Tailwind CSS",
   },
 ];
 
@@ -46,10 +46,10 @@ function CardGrid() {
               />
             </CardHeader>
             <CardBody>
-              <Typography variant="h5" color="blue-gray" className="mb-2">
+              <Typography variant="h4" color="blue-gray" className="mb-2">
                 {card.title}
               </Typography>
-              <Typography>{card.desc}</Typography>
+              <Typography className="text-lg">{card.desc}</Typography>
             </CardBody>
           </Card>
         );

@@ -1,5 +1,12 @@
+import { Title, CardGrid } from "../index.ts";
+
 function Recipes() {
-  return <>Recipes</>;
+  return (
+    <div>
+      <Title text="Recipes" />
+      <CardGrid />;
+    </div>
+  );
 }
 
 export default Recipes;

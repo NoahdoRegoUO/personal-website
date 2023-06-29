@@ -13,3 +13,6 @@ export {default as RecipesPage} from "./pages/Recipes";
 export {default as NavBar} from "./components/NavBar";
 export {default as Title} from "./components/Title";
 export {default as CardGrid} from "./components/CardGrid";
+
+// Data
+export {default as projectsData} from "./data/projects";

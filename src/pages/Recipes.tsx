@@ -1,10 +1,11 @@
 import { Title, CardGrid } from "../index.ts";
+import { projectsData } from "../index.ts";
 
 function Recipes() {
   return (
     <div>
       <Title text="Recipes" />
-      <CardGrid />;
+      <CardGrid data={projectsData} />;
     </div>
   );
 }

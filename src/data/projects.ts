@@ -22,7 +22,7 @@ const projectsData = [
   {
     title: "Personal Website",
     image: personalWebsiteImage,
-    desc: "My personal website (yes, this one) made with Vite + React, Tailwind CSS",
+    desc: "My personal website (yes, this one!) made with Vite + React, Tailwind CSS",
   },
 ];
 

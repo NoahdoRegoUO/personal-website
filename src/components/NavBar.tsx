@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useEffect, createElement } from "react";
 import { useNavigate, Outlet } from "react-router-dom";
 import {
   Navbar,
@@ -62,15 +62,15 @@ const navListMenuItems = [
 ];
 
 function NavListMenu() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const renderItems = navListMenuItems.map(
     ({ icon, title, description, color, page }, key) => (
       <a href={page} key={key}>
         <MenuItem className="flex items-center gap-3 rounded-lg">
           <div className={`rounded-lg p-5 ${colors[color]}`}>
-            {React.createElement(icon, {
+            {createElement(icon, {
               strokeWidth: 2,
               className: "h-6 w-6",
             })}
@@ -180,7 +180,7 @@ export default function MainNavBar() {
   const [darkMode, setDarkMode] = useState(true);
   const navigate = useNavigate();
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 720 && setOpenNav(false)

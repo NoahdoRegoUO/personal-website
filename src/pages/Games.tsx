@@ -1,4 +1,4 @@
-import { Title, CardGrid } from "../index.ts";
+import { Title } from "../index.ts";
 import { Typography } from "@material-tailwind/react";
 // import { projectsData } from "../index.ts";
 

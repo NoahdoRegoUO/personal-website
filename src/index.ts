@@ -17,3 +17,4 @@ export { default as ContactIcons } from "./components/ContactIcons";
 
 // Data
 export { default as projectsData } from "./data/projects";
+export { default as featuredItemsData } from "./data/featured";

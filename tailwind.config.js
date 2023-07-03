@@ -5,8 +5,8 @@ module.exports = withMT({
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      keyframes: {
-
+      backgroundImage: {
+        "blue-green-gradient": "bg-gradient-to-r from-green-300 to-blue-200",
       }
     },
   },

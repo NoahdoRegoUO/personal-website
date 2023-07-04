@@ -1,5 +1,5 @@
 import featuredProjectImage from "../assets/images/projects/oneday.png";
-import featuredVideoImage from "../assets/images/projects/oneday.png";
+import featuredVideoImage from "../assets/images/videos/terrible_taxi_1_thumbnail.png";
 
 const featuredItems = {
   project: {
@@ -8,9 +8,9 @@ const featuredItems = {
     desc: "A minimalist, simplified daily planner app made with React Native",
   },
   video: {
-    title: "OneDay",
+    title: "Terrible Taxi Devlog 1",
     image: featuredVideoImage,
-    desc: "A minimalist, simplified daily planner app made with React Native",
+    desc: "A devlog about a cartoon taxi game I'm building in Unity",
   },
 };
 

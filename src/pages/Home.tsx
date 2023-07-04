@@ -8,7 +8,7 @@ import {
 import { TypeAnimation } from "react-type-animation";
 
 // Components
-import { ContactIcons } from "../index.ts";
+import { ContactIcons, ExperienceIcons } from "../index.ts";
 
 // Data
 import { featuredItemsData } from "../index.ts";
@@ -49,7 +49,7 @@ function Home() {
         <div className="max-w-full mt-5 mx-10">
           <Typography
             variant="paragraph"
-            className="text-base md:text-lg lg:text-2xl xl:text-3xl"
+            className="text-base md:text-lg lg:text-2xl"
           >
             Hey! I'm Noah- a university student with experience in full-stack
             development, game development and mobile development. I'm interested
@@ -61,12 +61,13 @@ function Home() {
       <hr className="mx-10 my-5 rounded" />
       <div className="lg:flex lg:items-start lg:justify-start lg:gap-10 mx-10">
         <div>
-          <Typography variant="h2" className="ml-1">
+          {/* Skills Section */}
+          <Typography variant="h3" className="ml-1 text-2xl xl:text-3xl">
             Skills
           </Typography>
           <div className="justify-start">
             <div className="items-start gap-5 mb-10 lg:mb-0">
-              <Typography variant="h5" className="ml-1 mt-5">
+              <Typography variant="h5" className="ml-1 mt-5 text-lg md:text-xl">
                 Frontend Development
               </Typography>
               <Progress
@@ -74,7 +75,7 @@ function Home() {
                 value={80}
                 size="lg"
               />
-              <Typography variant="h5" className="ml-1 mt-5">
+              <Typography variant="h5" className="ml-1 mt-5 text-lg md:text-xl">
                 Backend Development
               </Typography>
               <Progress
@@ -82,7 +83,7 @@ function Home() {
                 value={65}
                 size="lg"
               />
-              <Typography variant="h5" className="ml-1 mt-5">
+              <Typography variant="h5" className="ml-1 mt-5 text-lg md:text-xl">
                 Game Development
               </Typography>
               <Progress
@@ -90,7 +91,7 @@ function Home() {
                 value={85}
                 size="lg"
               />
-              <Typography variant="h5" className="ml-1 mt-5">
+              <Typography variant="h5" className="ml-1 mt-5 text-lg md:text-xl">
                 Mobile Development
               </Typography>
               <Progress
@@ -100,44 +101,77 @@ function Home() {
               />
             </div>
           </div>
+          {/* Experirence Section */}
+          <Typography variant="h3" className="ml-1 mt-10 text-2xl xl:text-3xl">
+            Experience
+          </Typography>
+          <div className="flex items-center gap-4 w-full justify-left mt-5">
+            <ExperienceIcons />
+          </div>
         </div>
-        <div className="flex items-start gap-5">
+        <div className="sm:grid sm:grid-cols-2 sm:items-start sm:gap-x-5 items-center">
           {/* Featured Project */}
-          <Card className="">
-            <CardHeader floated={false} color="blue-gray" className="relative">
-              <img
-                className="object-cover aspect-[6/4]"
-                src={featuredItemsData.project.image}
-                alt="img-blur-shadow"
-              />
-            </CardHeader>
-            <CardBody>
-              <Typography variant="h4" color="blue-gray" className="mb-2">
-                {featuredItemsData.project.title}
-              </Typography>
-              <Typography className="text-lg">
-                {featuredItemsData.project.desc}
-              </Typography>
-            </CardBody>
-          </Card>
+          <div>
+            <Typography variant="h3" className="ml-1 mb-5 text-2xl xl:text-3xl">
+              Featured Project
+            </Typography>
+            <Card className="mb-10 sm:mb-0">
+              <CardHeader
+                floated={false}
+                color="blue-gray"
+                className="relative"
+              >
+                <img
+                  className="object-cover aspect-[16/9]"
+                  src={featuredItemsData.project.image}
+                  alt="img-blur-shadow"
+                />
+              </CardHeader>
+              <CardBody>
+                <Typography
+                  variant="h4"
+                  color="blue-gray"
+                  className="mb-2 line-clamp-1"
+                >
+                  {featuredItemsData.project.title}
+                </Typography>
+                <Typography className="text-lg line-clamp-2">
+                  {featuredItemsData.project.desc}
+                </Typography>
+              </CardBody>
+            </Card>
+          </div>
           {/* Featured Video */}
-          <Card className="">
-            <CardHeader floated={false} color="blue-gray" className="relative">
-              <img
-                className="object-cover aspect-[6/4]"
-                src={featuredItemsData.project.image}
-                alt="img-blur-shadow"
-              />
-            </CardHeader>
-            <CardBody>
-              <Typography variant="h4" color="blue-gray" className="mb-2">
-                {featuredItemsData.project.title}
-              </Typography>
-              <Typography className="text-lg">
-                {featuredItemsData.project.desc}
-              </Typography>
-            </CardBody>
-          </Card>
+          <div>
+            <Typography variant="h3" className="ml-1 mb-5 text-2xl xl:text-3xl">
+              Featured Video
+            </Typography>
+            <Card className="mb-10 sm:mb-0">
+              <CardHeader
+                floated={false}
+                color="blue-gray"
+                className="relative"
+              >
+                <img
+                  className="object-cover aspect-[16/9]"
+                  src={featuredItemsData.video.image}
+                  alt="img-blur-shadow"
+                />
+              </CardHeader>
+              <CardBody>
+                <Typography
+                  variant="h4"
+                  color="blue-gray"
+                  className="mb-2 line-clamp-1"
+                >
+                  {featuredItemsData.video.title}
+                </Typography>
+                <Typography className="text-lg line-clamp-2">
+                  {featuredItemsData.video.desc}
+                </Typography>
+              </CardBody>
+            </Card>
+          </div>
         </div>
       </div>
     </>

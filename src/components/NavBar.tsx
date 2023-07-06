@@ -1,5 +1,6 @@
 import { useState, useEffect, createElement } from "react";
 import { useNavigate, Outlet } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 import {
   Navbar,
   Collapse,
@@ -180,12 +181,28 @@ export default function MainNavBar() {
   const [darkMode, setDarkMode] = useState(true);
   const navigate = useNavigate();
 
+  useMediaQuery(
+    {
+      query: "(prefers-color-scheme: dark)",
+    },
+    undefined,
+    (isSystemDark) => setDarkMode(isSystemDark)
+  );
+
   useEffect(() => {
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 720 && setOpenNav(false)
     );
   }, []);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.setAttribute("data-theme", "dark");
+    } else {
+      document.body.setAttribute("data-theme", "light");
+    }
+  }, [darkMode]);
 
   return (
     <>

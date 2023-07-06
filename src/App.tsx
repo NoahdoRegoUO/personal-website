@@ -20,6 +20,7 @@ function App() {
       },
     },
   };
+
   return (
     <ThemeProvider value={customTheme}>
       <BrowserRouter>

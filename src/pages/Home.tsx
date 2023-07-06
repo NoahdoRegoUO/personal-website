@@ -29,7 +29,7 @@ function Home() {
                 1500, // wait 1s before replacing "Mice" with "Hamsters"
                 "Developer ",
                 1500,
-                "Designer ",
+                "Creator ",
                 1500,
                 "Writer ",
                 1500,
@@ -96,14 +96,14 @@ function Home() {
               </Typography>
               <Progress
                 className="lg:w-[35vw] mt-2 bg-blue-gray-600"
-                value={55}
+                value={68}
                 size="lg"
               />
             </div>
           </div>
           {/* Experirence Section */}
           <Typography variant="h3" className="ml-1 mt-10 text-2xl xl:text-3xl">
-            Experience
+            Work Experience
           </Typography>
           <div className="flex items-center gap-4 w-full justify-left mt-5">
             <ExperienceIcons />

@@ -105,7 +105,7 @@ function Home() {
           <Typography variant="h3" className="ml-1 mt-10 text-2xl xl:text-3xl">
             Work Experience
           </Typography>
-          <div className="flex items-center gap-4 w-full justify-left mt-5">
+          <div className="flex items-center gap-4 w-full justify-left mt-5 mb-10 md:mb-0">
             <ExperienceIcons />
           </div>
         </div>

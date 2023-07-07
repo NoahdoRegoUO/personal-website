@@ -58,7 +58,7 @@ function Home() {
           </Typography>
         </div>
       </div>
-      <hr className="mx-10 my-5 rounded" />
+      <hr className="mx-10 my-5 rounded border-blue-gray-600 dark:border-white" />
       <div className="lg:flex lg:items-start lg:justify-start lg:gap-10 mx-10">
         <div>
           {/* Skills Section */}
@@ -115,62 +115,66 @@ function Home() {
             <Typography variant="h3" className="ml-1 mb-5 text-2xl xl:text-3xl">
               Featured Project
             </Typography>
-            <Card className="mb-10 sm:mb-0">
-              <CardHeader
-                floated={false}
-                color="blue-gray"
-                className="relative"
-              >
-                <img
-                  className="object-cover aspect-[16/9]"
-                  src={featuredItemsData.project.image}
-                  alt="img-blur-shadow"
-                />
-              </CardHeader>
-              <CardBody>
-                <Typography
-                  variant="h4"
+            <a href={featuredItemsData.project.link} target="_blank">
+              <Card className="mb-10 sm:mb-0 outline outline-1 dark:outline-0">
+                <CardHeader
+                  floated={false}
                   color="blue-gray"
-                  className="mb-2 line-clamp-1"
+                  className="relative"
                 >
-                  {featuredItemsData.project.title}
-                </Typography>
-                <Typography className="text-lg line-clamp-2">
-                  {featuredItemsData.project.desc}
-                </Typography>
-              </CardBody>
-            </Card>
+                  <img
+                    className="object-cover aspect-[16/9]"
+                    src={featuredItemsData.project.image}
+                    alt="img-blur-shadow"
+                  />
+                </CardHeader>
+                <CardBody>
+                  <Typography
+                    variant="h4"
+                    color="blue-gray"
+                    className="mb-2 line-clamp-1"
+                  >
+                    {featuredItemsData.project.title}
+                  </Typography>
+                  <Typography className="text-lg line-clamp-2">
+                    {featuredItemsData.project.desc}
+                  </Typography>
+                </CardBody>
+              </Card>
+            </a>
           </div>
           {/* Featured Video */}
           <div>
             <Typography variant="h3" className="ml-1 mb-5 text-2xl xl:text-3xl">
               Featured Video
             </Typography>
-            <Card className="mb-10 sm:mb-0">
-              <CardHeader
-                floated={false}
-                color="blue-gray"
-                className="relative"
-              >
-                <img
-                  className="object-cover aspect-[16/9]"
-                  src={featuredItemsData.video.image}
-                  alt="img-blur-shadow"
-                />
-              </CardHeader>
-              <CardBody>
-                <Typography
-                  variant="h4"
+            <a href={featuredItemsData.video.link} target="_blank">
+              <Card className="mb-10 sm:mb-0 outline outline-1 dark:outline-0">
+                <CardHeader
+                  floated={false}
                   color="blue-gray"
-                  className="mb-2 line-clamp-1"
+                  className="relative"
                 >
-                  {featuredItemsData.video.title}
-                </Typography>
-                <Typography className="text-lg line-clamp-2">
-                  {featuredItemsData.video.desc}
-                </Typography>
-              </CardBody>
-            </Card>
+                  <img
+                    className="object-cover aspect-[16/9]"
+                    src={featuredItemsData.video.image}
+                    alt="img-blur-shadow"
+                  />
+                </CardHeader>
+                <CardBody>
+                  <Typography
+                    variant="h4"
+                    color="blue-gray"
+                    className="mb-2 line-clamp-1"
+                  >
+                    {featuredItemsData.video.title}
+                  </Typography>
+                  <Typography className="text-lg line-clamp-2">
+                    {featuredItemsData.video.desc}
+                  </Typography>
+                </CardBody>
+              </Card>
+            </a>
           </div>
         </div>
       </div>

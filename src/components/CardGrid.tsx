@@ -15,7 +15,7 @@ function CardGrid(props: {
           <Card className="">
             <CardHeader floated={false} color="blue-gray" className="relative">
               <img
-                className="object-cover aspect-[6/4]"
+                className="object-cover aspect-[16/9]"
                 src={card.image}
                 alt="img-blur-shadow"
               />

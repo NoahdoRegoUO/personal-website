@@ -8,7 +8,7 @@ import {
 function CardGrid(props: {
   data: {
     title: string;
-    desc: string;
+    desc: string | undefined;
     image: string;
     link: string | undefined;
   }[];
@@ -34,7 +34,9 @@ function CardGrid(props: {
                 <Typography variant="h4" color="blue-gray" className="mb-2">
                   {card.title}
                 </Typography>
-                <Typography className="text-lg">{card.desc}</Typography>
+                <Typography className="text-lg line-clamp-2">
+                  {card.desc}
+                </Typography>
               </CardBody>
             </Card>
           </a>

@@ -19,3 +19,6 @@ export { default as ExperienceIcons } from "./components/ExperienceIcons";
 // Data
 export { default as projectsData } from "./data/projects";
 export { default as featuredItemsData } from "./data/featured";
+export { default as blogData } from "./data/blog";
+export { default as gameData } from "./data/games";
+export { default as recipeData } from "./data/recipes";

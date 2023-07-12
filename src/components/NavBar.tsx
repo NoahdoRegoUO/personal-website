@@ -224,9 +224,9 @@ export default function MainNavBar() {
               onClick={() => setDarkMode(!darkMode)}
             >
               {darkMode ? (
-                <SunIcon className="h-[30px] w-[30px]" />
-              ) : (
                 <MoonIcon className="h-[30px] w-[30px]" />
+              ) : (
+                <SunIcon className="h-[30px] w-[30px]" />
               )}
             </Typography>
           </div>

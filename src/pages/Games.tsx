@@ -5,7 +5,7 @@ function Games() {
   return (
     <div>
       <Title text="Games" />
-      <hr className="mx-10 my-2 rounded border-blue-gray-600 dark:border-white" />
+      <hr className="mx-10 mb-7 rounded border-blue-gray-600 dark:border-white" />
       <CardGrid data={gameData} />
     </div>
   );

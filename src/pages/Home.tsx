@@ -42,7 +42,7 @@ function Home() {
               repeat={Infinity}
             />
           </Typography>
-          <div className="flex items-center gap-8 max-w-full justify-left ml-10 mt-5">
+          <div className="flex items-center gap-3 sm:gap-8 max-w-full justify-left ml-10 mt-5">
             <ContactIcons />
           </div>
         </div>

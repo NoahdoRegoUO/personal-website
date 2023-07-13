@@ -14,11 +14,11 @@ function CardGrid(props: {
   }[];
 }) {
   return (
-    <div className="grid grid-flow-row gap-8 text-neutral-600 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 px-8">
+    <div className="grid grid-flow-row gap-8 text-neutral-600 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 px-8 mb-10">
       {props.data.map((card) => {
         return (
           <a href={card.link} target="_blank">
-            <Card className="outline outline-1 dark:outline-0">
+            <Card className="outline outline-1 dark:outline-0 dark:bg-blue-gray-800 drop-shadow-2xl">
               <CardHeader
                 floated={false}
                 color="blue-gray"
@@ -31,10 +31,14 @@ function CardGrid(props: {
                 />
               </CardHeader>
               <CardBody>
-                <Typography variant="h4" color="blue-gray" className="mb-2">
+                <Typography
+                  variant="h4"
+                  color="blue-gray"
+                  className="mb-2 text-blue-gray-900 dark:text-gray-100"
+                >
                   {card.title}
                 </Typography>
-                <Typography className="text-lg line-clamp-2">
+                <Typography className="text-lg line-clamp-2 text-blue-gray-900 dark:text-gray-300">
                   {card.desc}
                 </Typography>
               </CardBody>

@@ -18,7 +18,7 @@ function Home() {
     <>
       <div className="lg:flex items-start justify-between">
         <div className="min-w-fit max-w-fit">
-          <Typography variant="h1" className="ml-10 mt-5 text-6xl">
+          <Typography variant="h1" className="ml-10 mt-5 text-5xl sm:text-6xl">
             Noah do Régo
           </Typography>
           <Typography variant="lead" className="ml-10 mt-1 text-md">
@@ -116,7 +116,7 @@ function Home() {
               Featured Project
             </Typography>
             <a href={featuredItemsData.project.link} target="_blank">
-              <Card className="mb-10 sm:mb-0 outline outline-1 dark:outline-0">
+              <Card className="mb-10 sm:mb-0 outline outline-1 dark:outline-0 dark:bg-blue-gray-800 drop-shadow-2xl">
                 <CardHeader
                   floated={false}
                   color="blue-gray"
@@ -131,12 +131,11 @@ function Home() {
                 <CardBody>
                   <Typography
                     variant="h4"
-                    color="blue-gray"
-                    className="mb-2 line-clamp-1"
+                    className="mb-2 line-clamp-1 text-blue-gray-900 dark:text-gray-100"
                   >
                     {featuredItemsData.project.title}
                   </Typography>
-                  <Typography className="text-lg line-clamp-2">
+                  <Typography className="text-lg line-clamp-2 text-blue-gray-900 dark:text-gray-300">
                     {featuredItemsData.project.desc}
                   </Typography>
                 </CardBody>
@@ -149,7 +148,7 @@ function Home() {
               Featured Video
             </Typography>
             <a href={featuredItemsData.video.link} target="_blank">
-              <Card className="mb-10 sm:mb-0 outline outline-1 dark:outline-0">
+              <Card className="mb-10 sm:mb-0 outline outline-1 dark:outline-0 dark:bg-blue-gray-800 drop-shadow-2xl">
                 <CardHeader
                   floated={false}
                   color="blue-gray"
@@ -164,12 +163,11 @@ function Home() {
                 <CardBody>
                   <Typography
                     variant="h4"
-                    color="blue-gray"
-                    className="mb-2 line-clamp-1"
+                    className="mb-2 line-clamp-1 text-blue-gray-900 dark:text-gray-300"
                   >
                     {featuredItemsData.video.title}
                   </Typography>
-                  <Typography className="text-lg line-clamp-2">
+                  <Typography className="text-lg line-clamp-2 text-blue-gray-900 dark:text-gray-300">
                     {featuredItemsData.video.desc}
                   </Typography>
                 </CardBody>

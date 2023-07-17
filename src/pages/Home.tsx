@@ -131,7 +131,7 @@ function Home() {
                 <CardBody>
                   <Typography
                     variant="h4"
-                    className="mb-2 line-clamp-1 text-blue-gray-900 dark:text-gray-100"
+                    className="mb-2 line-clamp-2 text-blue-gray-900 dark:text-gray-100 h-[72px]"
                   >
                     {featuredItemsData.project.title}
                   </Typography>
@@ -163,7 +163,7 @@ function Home() {
                 <CardBody>
                   <Typography
                     variant="h4"
-                    className="mb-2 line-clamp-1 text-blue-gray-900 dark:text-gray-300"
+                    className="mb-2 line-clamp-2 text-blue-gray-900 dark:text-gray-300 h-[72px]"
                   >
                     {featuredItemsData.video.title}
                   </Typography>

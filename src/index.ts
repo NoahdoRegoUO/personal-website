@@ -11,6 +11,7 @@ export { default as RecipesPage } from "./pages/Recipes";
 
 // Components
 export { default as NavBar } from "./components/NavBar";
+export { default as Footer } from "./components/Footer";
 export { default as Title } from "./components/Title";
 export { default as CardGrid } from "./components/CardGrid";
 export { default as ContactIcons } from "./components/ContactIcons";

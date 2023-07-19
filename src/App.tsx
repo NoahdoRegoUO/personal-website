@@ -4,10 +4,10 @@ import {
   BlogPage,
   GamesPage,
   HomePage,
-  NavBar,
   ProjectsPage,
   RecipesPage,
 } from "./index.ts";
+import { NavBar, Footer } from "./index.ts";
 
 function App() {
   const customTheme = {
@@ -24,14 +24,17 @@ function App() {
   return (
     <ThemeProvider value={customTheme}>
       <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/games" element={<GamesPage />} />
-          <Route path="/recipes" element={<RecipesPage />} />
-        </Routes>
+        <div className="flex flex-col h-screen justify-between">
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/games" element={<GamesPage />} />
+            <Route path="/recipes" element={<RecipesPage />} />
+          </Routes>
+          <Footer />
+        </div>
       </BrowserRouter>
     </ThemeProvider>
   );

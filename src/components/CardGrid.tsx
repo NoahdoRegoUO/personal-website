@@ -38,7 +38,7 @@ function CardGrid(props: {
                 >
                   {card.title}
                 </Typography>
-                <Typography className="text-lg line-clamp-2 text-blue-gray-900 dark:text-gray-300">
+                <Typography className="text-lg xl:text-xl line-clamp-2 text-blue-gray-900 dark:text-gray-300">
                   {card.desc}
                 </Typography>
               </CardBody>

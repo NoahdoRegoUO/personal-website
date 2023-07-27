@@ -30,7 +30,7 @@ const blogData = [
   {
     title: "The Illusion of Self-sufficiency",
     image:
-      "https://miro.medium.com/v2/resize:fit:784/format:webp/0*9WIBa3-SPTqdGAlp.jpg",
+      "https://www.weareteachers.com/wp-content/uploads/How-I-Use-Fishbowl-Discussions-to-Engage-Every-Student.jpg",
     desc: "All of the games I've made in Unity (programmed in C#)",
     link: "https://noah-dorego.medium.com/the-illusion-of-self-sufficiency-65b5021c1fd5",
   },

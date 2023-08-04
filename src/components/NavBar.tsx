@@ -131,8 +131,8 @@ function NavListMenu() {
             </ListItem>
           </Typography>
         </MenuHandler>
-        <MenuList className="hidden max-w-screen-xl rounded-xl md:block border-none">
-          <ul className="grid grid-cols-3 gap-y-2 border-none">
+        <MenuList className="hidden max-w-screen-xl rounded-xl md:block flex-row border-none">
+          <ul className="grid grid-cols-3 gap-y-2 border-none outline-none">
             {renderItems}
           </ul>
         </MenuList>

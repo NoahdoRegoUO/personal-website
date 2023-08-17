@@ -3,8 +3,15 @@ import onedayImage from "../assets/images/projects/oneday.png";
 import trendImage from "../assets/images/projects/trend.jpg";
 import personalWebsiteImage from "../assets/images/projects/personal-website.jpg";
 import unityImage from "../assets/images/projects/unity-art-2023.jpg";
+import pyFileConvImage from "../assets/images/projects/py-file-convert-thumbnail.png";
 
 const projectsData = [
+  {
+    title: "Python File Converter",
+    image: pyFileConvImage,
+    desc: "A python program for converting file formats using ffmpeg",
+    link: "https://github.com/NoahdoRegoUO/python-file-converter",
+  },
   {
     title: "Personal Website",
     image: personalWebsiteImage,

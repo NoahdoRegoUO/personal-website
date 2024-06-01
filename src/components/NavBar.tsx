@@ -207,9 +207,9 @@ export default function MainNavBar() {
   }, [darkMode]);
 
   return (
-    <>
-      <Navbar className="max-w-full px-4 py-2 rounded-none border-none bg-gradient-to-r from-green-300 to-blue-200">
-        <div className="flex items-center justify-between text-blue-gray-900 select-none">
+    <div className="fixed top-0 z-50 flex items-center justify-between">
+      <Navbar className="max-w-full px-4 py-2 rounded-none border-none bg-transparent">
+        <div className="text-blue-gray-900 select-none">
           <div className="flex items-start">
             <Typography
               as="a"
@@ -253,6 +253,6 @@ export default function MainNavBar() {
         </Collapse>
       </Navbar>
       <Outlet />
-    </>
+    </div>
   );
 }

@@ -16,17 +16,23 @@ import { featuredItemsData } from "../index.ts";
 function Home() {
   return (
     <>
-      <div className="lg:flex items-start justify-between">
+      <div className="lg:flex items-center justify-center">
+        <div className="mr-5">
+          <img
+            className="h-96 w-full rounded-full object-center"
+            src="src/assets/images/misc/headshot.JPG"
+            alt="nature image"
+          />
+        </div>
         <div className="min-w-fit max-w-fit">
           <Typography variant="h1" className="ml-10 mt-5 text-5xl sm:text-6xl">
             Noah do Régo
           </Typography>
-          <Typography variant="lead" className="ml-10 mt-1 text-md">
+          <Typography variant="lead" className="ml-10 mt-3 text-md font-light">
             <TypeAnimation
               sequence={[
-                // Same substring at the start will only be typed out once, initially
                 "University Student ",
-                1500, // wait 1s before replacing "Mice" with "Hamsters"
+                1500,
                 "Developer ",
                 1500,
                 "Creator ",
@@ -42,75 +48,13 @@ function Home() {
               repeat={Infinity}
             />
           </Typography>
-          <div className="flex items-center gap-3 sm:gap-8 max-w-full justify-left ml-10 mt-5">
+          <div className="flex items-center gap-3 sm:gap-8 max-w-full justify-left ml-10 mt-6">
             <ContactIcons />
           </div>
         </div>
-        <div className="max-w-full mt-5 mx-10">
-          <Typography
-            variant="paragraph"
-            className="text-base md:text-lg lg:text-2xl"
-          >
-            Hey! I'm Noah- a university student with experience in full-stack
-            development, game development and mobile development. I'm interested
-            in AI, robotics, and modern technology in general. I'll always be
-            working on one project or another, feel free to reach out!
-          </Typography>
-        </div>
       </div>
-      <hr className="mx-10 my-5 rounded border-blue-gray-600 dark:border-white" />
-      <div className="lg:flex lg:items-start lg:justify-start lg:gap-10 mx-10">
-        <div>
-          {/* Skills Section */}
-          <Typography variant="h3" className="ml-1 text-2xl xl:text-3xl">
-            Skills
-          </Typography>
-          <div className="justify-start">
-            <div className="items-start gap-5 mb-10 lg:mb-0">
-              <Typography variant="h5" className="ml-1 mt-5 text-lg md:text-xl">
-                Frontend Development
-              </Typography>
-              <Progress
-                className="lg:w-[35vw] mt-2 bg-blue-gray-600"
-                value={80}
-                size="lg"
-              />
-              <Typography variant="h5" className="ml-1 mt-5 text-lg md:text-xl">
-                Backend Development
-              </Typography>
-              <Progress
-                className="lg:w-[35vw] mt-2 bg-blue-gray-600"
-                value={65}
-                size="lg"
-              />
-              <Typography variant="h5" className="ml-1 mt-5 text-lg md:text-xl">
-                Game Development
-              </Typography>
-              <Progress
-                className="lg:w-[35vw] mt-2 bg-blue-gray-600"
-                value={85}
-                size="lg"
-              />
-              <Typography variant="h5" className="ml-1 mt-5 text-lg md:text-xl">
-                Mobile Development
-              </Typography>
-              <Progress
-                className="lg:w-[35vw] mt-2 bg-blue-gray-600"
-                value={68}
-                size="lg"
-              />
-            </div>
-          </div>
-          {/* Experirence Section */}
-          <Typography variant="h3" className="ml-1 mt-10 text-2xl xl:text-3xl">
-            Work Experience
-          </Typography>
-          <div className="flex items-center gap-4 w-full justify-left mt-5 mb-10 md:mb-0">
-            <ExperienceIcons />
-          </div>
-        </div>
+      {/* <div className="lg:flex lg:items-start lg:justify-start lg:gap-10 mx-10">
         <div className="sm:grid sm:grid-cols-2 sm:items-start sm:gap-x-5 items-center">
-          {/* Featured Project */}
           <div>
             <Typography variant="h3" className="ml-1 mb-5 text-2xl xl:text-3xl">
               Featured Project
@@ -142,7 +86,6 @@ function Home() {
               </Card>
             </a>
           </div>
-          {/* Featured Video */}
           <div>
             <Typography variant="h3" className="ml-1 mb-5 text-2xl xl:text-3xl">
               Featured Video
@@ -175,7 +118,7 @@ function Home() {
             </a>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

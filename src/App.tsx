@@ -33,7 +33,6 @@ function App() {
             <Route path="/games" element={<GamesPage />} />
             <Route path="/recipes" element={<RecipesPage />} />
           </Routes>
-          <Footer />
         </div>
       </BrowserRouter>
     </ThemeProvider>

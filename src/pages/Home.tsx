@@ -16,19 +16,31 @@ import { featuredItemsData } from "../index.ts";
 function Home() {
   return (
     <>
-      <div className="lg:flex items-center justify-center">
-        <div className="mr-5">
+      <div className="flex h-screen items-center justify-center">
+        {/* PHOTO */}
+        <div className="w-1/4 max-w-md">
           <img
-            className="h-96 w-full rounded-full object-center"
+            className="rounded-full object-center"
             src="src/assets/images/misc/headshot.JPG"
-            alt="nature image"
+            alt="headshot image"
           />
         </div>
+        {/* SPACER */}
+        <span style={{ width: "3vw" }} />
+        {/* TITLE */}
         <div className="min-w-fit max-w-fit">
-          <Typography variant="h1" className="ml-10 mt-5 text-5xl sm:text-6xl">
+          <Typography
+            variant="h1"
+            className="mt-5 font-extrabold"
+            style={{ "font-size": "6vw" }}
+          >
             Noah do Régo
           </Typography>
-          <Typography variant="lead" className="ml-10 mt-3 text-md font-light">
+          <Typography
+            variant="lead"
+            className="text-md font-light"
+            style={{ "font-size": "3vw" }}
+          >
             <TypeAnimation
               sequence={[
                 "University Student ",
@@ -44,11 +56,11 @@ function Home() {
               ]}
               wrapper="span"
               speed={50}
-              style={{ fontSize: "2em", display: "inline-block" }}
+              style={{ display: "inline-block" }}
               repeat={Infinity}
             />
           </Typography>
-          <div className="flex items-center gap-3 sm:gap-8 max-w-full justify-left ml-10 mt-6">
+          <div className="flex items-center gap-3 sm:gap-8 max-w-full justify-left mt-[2vw]">
             <ContactIcons />
           </div>
         </div>

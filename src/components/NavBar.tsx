@@ -180,16 +180,8 @@ function NavList() {
 
 export default function MainNavBar() {
   const [openNav, setOpenNav] = useState(false);
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   const navigate = useNavigate();
-
-  useMediaQuery(
-    {
-      query: "(prefers-color-scheme: dark)",
-    },
-    undefined,
-    (isSystemDark) => setDarkMode(isSystemDark)
-  );
 
   useEffect(() => {
     window.addEventListener(
@@ -207,31 +199,9 @@ export default function MainNavBar() {
   }, [darkMode]);
 
   return (
-    <div className="fixed top-0 z-50 flex items-center justify-between">
+    <div className="fixed top-0 z-50 flex items-center justify-between w-full">
       <Navbar className="max-w-full px-4 py-2 rounded-none border-none bg-transparent">
-        <div className="text-blue-gray-900 select-none">
-          <div className="flex items-start">
-            <Typography
-              as="a"
-              href="/#"
-              variant="h6"
-              className="mr-4 cursor-pointer py-1.5 ml-2"
-              onClick={() => navigate("/")}
-            >
-              <BsGlobe className="h-[30px] w-[30px]" />
-            </Typography>
-            <Typography
-              variant="h6"
-              className="mr-4 cursor-pointer py-1.5 ml-2"
-              onClick={() => setDarkMode(!darkMode)}
-            >
-              {darkMode ? (
-                <MoonIcon className="h-[30px] w-[30px]" />
-              ) : (
-                <SunIcon className="h-[30px] w-[30px]" />
-              )}
-            </Typography>
-          </div>
+        <div className="text-blue-gray-900 select-none flex items-center justify-between">
           <div className="hidden md:block">
             <NavList />
           </div>
@@ -247,6 +217,19 @@ export default function MainNavBar() {
               <Bars3Icon className="h-6 w-6" strokeWidth={2} />
             )}
           </IconButton>
+          <div className="justify-end flex">
+            <Typography
+              variant="h6"
+              className="mr-4 cursor-pointer py-1.5 ml-2"
+              onClick={() => setDarkMode(!darkMode)}
+            >
+              {darkMode ? (
+                <MoonIcon className="h-[30px] w-[30px]" />
+              ) : (
+                <SunIcon className="h-[30px] w-[30px]" />
+              )}
+            </Typography>
+          </div>
         </div>
         <Collapse open={openNav}>
           <NavList />

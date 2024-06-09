@@ -1,20 +1,11 @@
-import { useRef } from "react";
-import {
-  Typography,
-  Progress,
-  Card,
-  CardHeader,
-  CardBody,
-} from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 import { TypeAnimation } from "react-type-animation";
 import { BsChevronCompactDown } from "react-icons/bs";
 
 // Components
-import { ContactIcons, ExperienceIcons } from "../index.ts";
+import { ContactIcons } from "../index.ts";
 
 // Data
-import { featuredItemsData } from "../index.ts";
-
 function Home() {
   return (
     <div className="snap-y snap-mandatory overflow-y-scroll max-h-screen">

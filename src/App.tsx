@@ -7,7 +7,7 @@ import {
   ProjectsPage,
   RecipesPage,
 } from "./index.ts";
-import { NavBar, Footer } from "./index.ts";
+import { NavBar } from "./index.ts";
 
 function App() {
   const customTheme = {

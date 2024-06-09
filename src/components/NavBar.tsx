@@ -1,6 +1,5 @@
 import { useState, useEffect, createElement } from "react";
-import { useNavigate, Outlet } from "react-router-dom";
-import { useMediaQuery } from "react-responsive";
+import { Outlet } from "react-router-dom";
 import {
   Navbar,
   Collapse,
@@ -180,7 +179,6 @@ function NavList() {
 export default function MainNavBar() {
   const [openNav, setOpenNav] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
-  const navigate = useNavigate();
 
   useEffect(() => {
     window.addEventListener(

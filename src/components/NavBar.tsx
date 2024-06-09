@@ -25,7 +25,6 @@ import {
   SunIcon,
 } from "@heroicons/react/24/outline";
 import { LuChefHat, LuGamepad2 } from "react-icons/lu";
-import { BsGlobe } from "react-icons/bs";
 
 const colors: { [index: string]: string } = {
   blue: "bg-blue-50 text-blue-500",
@@ -224,7 +223,7 @@ export default function MainNavBar() {
               onClick={() => setDarkMode(!darkMode)}
             >
               {darkMode ? (
-                <MoonIcon className="h-[30px] w-[30px]" />
+                <MoonIcon className="h-[30px] w-[30px] text-white" />
               ) : (
                 <SunIcon className="h-[30px] w-[30px]" />
               )}

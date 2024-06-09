@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import {
   Typography,
   Progress,
@@ -6,6 +7,7 @@ import {
   CardBody,
 } from "@material-tailwind/react";
 import { TypeAnimation } from "react-type-animation";
+import { BsChevronCompactDown } from "react-icons/bs";
 
 // Components
 import { ContactIcons, ExperienceIcons } from "../index.ts";
@@ -15,8 +17,8 @@ import { featuredItemsData } from "../index.ts";
 
 function Home() {
   return (
-    <>
-      <div className="flex h-screen items-center justify-center">
+    <div className="snap-y snap-mandatory overflow-y-scroll max-h-screen">
+      <div className="flex h-screen items-center justify-center snap-start">
         {/* PHOTO */}
         <div className="w-1/4 max-w-md">
           <img
@@ -32,14 +34,14 @@ function Home() {
           <Typography
             variant="h1"
             className="mt-5 font-extrabold"
-            style={{ "font-size": "6vw" }}
+            style={{ fontSize: "6vw" }}
           >
             Noah do Régo
           </Typography>
           <Typography
             variant="lead"
             className="text-md font-light"
-            style={{ "font-size": "3vw" }}
+            style={{ fontSize: "3vw" }}
           >
             <TypeAnimation
               sequence={[
@@ -65,73 +67,31 @@ function Home() {
           </div>
         </div>
       </div>
-      {/* <div className="lg:flex lg:items-start lg:justify-start lg:gap-10 mx-10">
-        <div className="sm:grid sm:grid-cols-2 sm:items-start sm:gap-x-5 items-center">
-          <div>
-            <Typography variant="h3" className="ml-1 mb-5 text-2xl xl:text-3xl">
-              Featured Project
-            </Typography>
-            <a href={featuredItemsData.project.link} target="_blank">
-              <Card className="mb-10 sm:mb-0 outline outline-1 dark:outline-0 dark:bg-blue-gray-800 drop-shadow-2xl">
-                <CardHeader
-                  floated={false}
-                  color="blue-gray"
-                  className="relative"
-                >
-                  <img
-                    className="object-cover aspect-[16/9]"
-                    src={featuredItemsData.project.image}
-                    alt="img-blur-shadow"
-                  />
-                </CardHeader>
-                <CardBody>
-                  <Typography
-                    variant="h4"
-                    className="mb-2 line-clamp-2 text-blue-gray-900 dark:text-gray-100 h-[72px]"
-                  >
-                    {featuredItemsData.project.title}
-                  </Typography>
-                  <Typography className="text-lg line-clamp-2 text-blue-gray-900 dark:text-gray-300">
-                    {featuredItemsData.project.desc}
-                  </Typography>
-                </CardBody>
-              </Card>
-            </a>
-          </div>
-          <div>
-            <Typography variant="h3" className="ml-1 mb-5 text-2xl xl:text-3xl">
-              Featured Video
-            </Typography>
-            <a href={featuredItemsData.video.link} target="_blank">
-              <Card className="mb-10 sm:mb-0 outline outline-1 dark:outline-0 dark:bg-blue-gray-800 drop-shadow-2xl">
-                <CardHeader
-                  floated={false}
-                  color="blue-gray"
-                  className="relative"
-                >
-                  <img
-                    className="object-cover aspect-[16/9]"
-                    src={featuredItemsData.video.image}
-                    alt="img-blur-shadow"
-                  />
-                </CardHeader>
-                <CardBody>
-                  <Typography
-                    variant="h4"
-                    className="mb-2 line-clamp-2 text-blue-gray-900 dark:text-gray-300 h-[72px]"
-                  >
-                    {featuredItemsData.video.title}
-                  </Typography>
-                  <Typography className="text-lg line-clamp-2 text-blue-gray-900 dark:text-gray-300">
-                    {featuredItemsData.video.desc}
-                  </Typography>
-                </CardBody>
-              </Card>
-            </a>
-          </div>
+      <div className="flex absolute left-auto bottom-0 w-screen justify-center">
+        <BsChevronCompactDown className="h-[4vw] w-[4vw] text-black dark:text-white" />
+      </div>
+      <div className="flex h-screen snap-start">
+        <div className="flex items-center justify-center">
+          <Typography
+            variant="paragraph"
+            className="text-md w-3/5 font-light"
+            style={{ fontSize: "2vw" }}
+          >
+            Hey! 👋🏽 I'm Noah- a
+            <b className="font-extrabold"> computer science student</b> 👨🏽‍💻
+            currently studying at the <i>University of Ottawa</i> 🏛️. I have
+            experience in{" "}
+            <b className="font-extrabold">full-stack development</b> 💻,{" "}
+            <b className="font-extrabold">game development</b> 🎮 and more. I'm
+            interested in <b className="font-extrabold">AI</b> 🧠,{" "}
+            <b className="font-extrabold">robotics</b> 🦾, and{" "}
+            <b className="font-extrabold">modern technology</b> 💡 in general.
+            I'll always be working on one project or another, feel free to reach
+            out!
+          </Typography>
         </div>
-      </div> */}
-    </>
+      </div>
+    </div>
   );
 }
 

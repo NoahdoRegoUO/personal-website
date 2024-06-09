@@ -25,7 +25,7 @@ function App() {
     <ThemeProvider value={customTheme}>
       <BrowserRouter>
         <NavBar />
-        <div className="flex flex-col h-screen justify-between">
+        <div className="flex flex-col justify-between">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/projects" element={<ProjectsPage />} />

@@ -8,8 +8,11 @@ import { ContactIcons } from "../index.ts";
 // Data
 function Home() {
   return (
-    <div className="snap-y snap-mandatory overflow-y-scroll max-h-screen">
-      <div className="flex h-screen items-center justify-center snap-start">
+    <div
+      className="snap-y snap-mandatory overflow-y-scroll max-h-screen"
+      id="container"
+    >
+      <div className="flex h-[90vh] items-center justify-center snap-start">
         {/* PHOTO */}
         <div className="w-1/4 max-w-md">
           <img
@@ -58,11 +61,19 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="flex absolute left-auto bottom-0 w-screen justify-center">
+      <div
+        className="flex left-auto bottom-0 w-screen h-[10vh] justify-center"
+        onClick={() => {
+          const bio_div = document.getElementById("bio");
+          const pos = bio_div!.getBoundingClientRect();
+          const container = document.getElementById("container");
+          container?.scrollTo({ top: pos.top, behavior: "smooth" });
+        }}
+      >
         <BsChevronCompactDown className="h-[4vw] w-[4vw] text-black dark:text-white" />
       </div>
       <div className="flex h-screen snap-start">
-        <div className="flex items-center justify-center">
+        <div id="bio" className="flex items-center justify-center">
           <Typography
             variant="paragraph"
             className="text-md w-3/5 font-light"

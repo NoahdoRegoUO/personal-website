@@ -1,6 +1,7 @@
 import { Typography } from "@material-tailwind/react";
 import { TypeAnimation } from "react-type-animation";
 import { BsChevronCompactDown } from "react-icons/bs";
+import headshotImage from "../assets/images/misc/headshot.png";
 
 // Components
 import { ContactIcons } from "../index.ts";
@@ -17,7 +18,7 @@ function Home() {
         <div className="w-1/4 max-w-md">
           <img
             className="rounded-full object-center"
-            src="src/assets/images/misc/headshot.JPG"
+            src={headshotImage}
             alt="headshot image"
           />
         </div>

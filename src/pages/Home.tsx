@@ -1,16 +1,16 @@
 import { Typography } from "@material-tailwind/react";
 import { TypeAnimation } from "react-type-animation";
 import { BsChevronCompactDown } from "react-icons/bs";
+import { motion } from "framer-motion";
 import headshotImage from "../assets/images/misc/headshot.png";
 
 // Components
 import { ContactIcons } from "../index.ts";
 
-// Data
 function Home() {
   return (
     <div
-      className="snap-y snap-mandatory overflow-y-scroll max-h-screen"
+      className="snap-y snap-mandatory overflow-y-auto overflow-x-hidden max-h-screen"
       id="container"
     >
       <div className="flex h-[90vh] items-center justify-center snap-start">
@@ -62,16 +62,30 @@ function Home() {
           </div>
         </div>
       </div>
-      <div
-        className="flex left-auto bottom-0 w-screen h-[10vh] justify-center"
-        onClick={() => {
-          const bio_div = document.getElementById("bio");
-          const pos = bio_div!.getBoundingClientRect();
-          const container = document.getElementById("container");
-          container?.scrollTo({ top: pos.top, behavior: "smooth" });
-        }}
-      >
-        <BsChevronCompactDown className="h-[4vw] w-[4vw] text-black dark:text-white" />
+      <div className="flex left-auto bottom-0 w-screen h-[10vh] justify-center">
+        <motion.div
+          style={{ cursor: "pointer" }}
+          animate={{
+            y: [null, -10, 0],
+          }}
+          transition={{
+            duration: 2,
+            ease: "easeInOut",
+            times: [0, 0.5, 1],
+            repeat: Infinity,
+            repeatDelay: 0,
+          }}
+        >
+          <BsChevronCompactDown
+            className="h-[4vw] w-[4vw] text-black dark:text-white"
+            onClick={() => {
+              const bio_div = document.getElementById("bio");
+              const pos = bio_div!.getBoundingClientRect();
+              const container = document.getElementById("container");
+              container?.scrollTo({ top: pos.top, behavior: "smooth" });
+            }}
+          />
+        </motion.div>
       </div>
       <div className="flex h-screen snap-start">
         <div id="bio" className="flex items-center justify-center">

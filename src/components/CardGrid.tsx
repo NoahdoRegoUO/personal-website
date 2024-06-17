@@ -18,11 +18,18 @@ function CardGrid(props: {
       {props.data.map((card) => {
         return (
           <a href={card.link} target="_blank">
-            <Card className="outline outline-1 dark:outline-0 dark:bg-blue-gray-800 drop-shadow-2xl">
+            <Card
+              className="bg-grey drop-shadow-2xl overflow-hidden"
+              style={{
+                backgroundImage:
+                  "radial-gradient(125% 125% at 50% 50%, transparent 0%, grey)",
+              }}
+            >
               <CardHeader
                 floated={false}
-                color="blue-gray"
-                className="relative"
+                shadow={true}
+                color="transparent"
+                className="relative m-0 rounded-none"
               >
                 <img
                   className="object-cover aspect-[16/9]"

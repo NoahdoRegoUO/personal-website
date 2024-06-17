@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { Outlet } from "react-router-dom";
 import {
   Navbar,
   Collapse,
   Typography,
   IconButton,
-  Button,
 } from "@material-tailwind/react";
 import {
   Bars3Icon,
@@ -20,43 +20,54 @@ import { LuGamepad2 } from "react-icons/lu";
 
 function NavList() {
   return (
-    <div className="flex items-start gap-4">
-      <Typography as="a" href="/" className="font-semibold">
-        <Button className="flex items-center gap-2 px-4 py-2 rounded-full">
-          <HomeIcon className="h-[18px] w-[18px]" />
-          Home
-        </Button>
-      </Typography>
-
-      <Typography as="a" href="projects" className="font-semibold">
-        <Button
-          color="green"
-          className="flex items-center gap-2 px-4 py-2 rounded-full"
-        >
-          <WrenchIcon className="h-[18px] w-[18px]" />
-          Projects
-        </Button>
-      </Typography>
-
-      <Typography as="a" href="games" className="font-semibold">
-        <Button
-          color="red"
-          className="flex items-center gap-2 px-4 py-2 rounded-full"
-        >
-          <LuGamepad2 className="h-[18px] w-[18px]" />
-          Games
-        </Button>
-      </Typography>
-
-      <Typography as="a" href="blog" className="font-semibold">
-        <Button
-          color="orange"
-          className="flex items-center gap-2 px-4 py-2 rounded-full"
-        >
-          <BookOpenIcon className="h-[18px] w-[18px]" />
-          Blog
-        </Button>
-      </Typography>
+    <div className="flex items-start gap-5">
+      <motion.a
+        href="/"
+        className="font-semibold flex items-center gap-2 text-[#242424] dark:text-[#F5F5F5]"
+        whileHover={{
+          y: -2,
+          transition: { duration: 0.1 },
+        }}
+      >
+        <HomeIcon className="h-[18px] w-[18px]" />
+        Home
+      </motion.a>
+      <div className="h-6 rounded-full border-r-[1px] border-current"></div>
+      <motion.a
+        href="projects"
+        className="font-semibold flex items-center gap-2 text-[#242424] dark:text-[#F5F5F5]"
+        whileHover={{
+          y: -2,
+          transition: { duration: 0.1 },
+        }}
+      >
+        <WrenchIcon className="h-[18px] w-[18px]" />
+        Projects
+      </motion.a>
+      <div className="h-6 rounded-full border-r-[1px] border-current"></div>
+      <motion.a
+        href="games"
+        className="font-semibold flex items-center gap-2 text-[#242424] dark:text-[#F5F5F5]"
+        whileHover={{
+          y: -2,
+          transition: { duration: 0.1 },
+        }}
+      >
+        <LuGamepad2 className="h-[18px] w-[18px]" />
+        Games
+      </motion.a>
+      <div className="h-6 rounded-full border-r-[1px] border-current"></div>
+      <motion.a
+        href="blog"
+        className="font-semibold flex items-center gap-2 text-[#242424] dark:text-[#F5F5F5]"
+        whileHover={{
+          y: -2,
+          transition: { duration: 0.1 },
+        }}
+      >
+        <BookOpenIcon className="h-[18px] w-[18px]" />
+        Blog
+      </motion.a>
     </div>
   );
 }

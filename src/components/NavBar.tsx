@@ -128,7 +128,7 @@ export default function MainNavBar() {
             </Typography>
           </div>
         </div>
-        <Collapse open={openNav}>
+        <Collapse open={openNav} className="flex justify-center ">
           <NavList />
         </Collapse>
       </Navbar>

@@ -12,14 +12,15 @@ import { ContactIcons } from "../index.ts";
 function Home() {
   return (
     <div
-      className="snap-y snap-mandatory overflow-y-auto overflow-x-hidden max-h-screen"
+      className="md:snap-y md:snap-mandatory overflow-y-auto overflow-x-hidden max-h-screen"
       style={{
         backgroundImage:
           "radial-gradient(125% 125% at 50% 0%, transparent 50%, grey)",
+        scrollbarWidth: "none",
       }}
       id="container"
     >
-      <div className="flex h-[90vh] items-center justify-center snap-start">
+      <div className="flex md:h-[90vh] h-[30vh] md:mt-0 mt-8 items-center justify-center snap-start">
         {/* PHOTO */}
         <div className="w-1/4 max-w-md">
           <img
@@ -68,7 +69,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="flex left-auto bottom-0 w-screen h-[10vh] justify-center">
+      <div className="md:flex left-auto bottom-0 w-screen h-[10vh] hidden justify-center">
         <motion.div
           style={{ cursor: "pointer" }}
           animate={{
@@ -95,11 +96,11 @@ function Home() {
           />
         </motion.div>
       </div>
-      <div className="flex h-[90vh] snap-start">
+      <div className="flex md:h-[90vh] h-[20vh] snap-start">
         <div id="bio" className="flex items-center justify-center">
           <Typography
             variant="paragraph"
-            className="text-md w-3/5 font-light"
+            className="text-md md:w-3/5 w-4/5 font-light"
             style={{ fontSize: "2vw" }}
           >
             Hey! 👋🏽 I'm Noah- a
@@ -116,7 +117,7 @@ function Home() {
           </Typography>
         </div>
       </div>
-      <div className="flex left-auto bottom-0 w-screen h-[10vh] justify-center">
+      <div className="md:flex hidden left-auto bottom-0 w-screen h-[10vh] justify-center">
         <motion.div
           style={{ cursor: "pointer" }}
           animate={{
@@ -143,9 +144,15 @@ function Home() {
           />
         </motion.div>
       </div>
-      <div className="h-screen flex items-center justify-center snap-start">
+      <div className="md:h-screen h-[50vh] flex items-center justify-center snap-start">
         <div>
-          <Title text="Featured Projects" />
+          <Typography
+            variant="h1"
+            className="font-extrabold text-center"
+            style={{ fontSize: "3.5vw" }}
+          >
+            Featured Projects
+          </Typography>
           <hr className="mx-[50vw] w-24 mb-7 rounded border-blue-gray-600 dark:border-white" />
           <div
             id="project-gallery"
@@ -153,22 +160,22 @@ function Home() {
           >
             <Carousel
               transition={{ duration: 1 }}
-              className="rounded-xl w-[60vw] h-[60vh]"
+              className="rounded-xl w-[60vw] md:h-[400px] lg:h-[600px] h-[300px]"
             >
               <img
                 src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
                 alt="image 1"
-                className="h-full w-full"
+                className="h-full w-full object-cover"
               />
               <img
                 src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
                 alt="image 2"
-                className="h-full w-full"
+                className="h-full w-full object-cover"
               />
               <img
                 src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
                 alt="image 3"
-                className="h-full w-full"
+                className="h-full w-full object-cover"
               />
             </Carousel>
           </div>

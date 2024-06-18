@@ -1,12 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@material-tailwind/react";
-import {
-  BlogPage,
-  GamesPage,
-  HomePage,
-  ProjectsPage,
-  RecipesPage,
-} from "./index.ts";
+import { BlogPage, GamesPage, HomePage, ProjectsPage } from "./index.ts";
 import { NavBar } from "./index.ts";
 
 function App() {
@@ -31,7 +25,6 @@ function App() {
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/games" element={<GamesPage />} />
-            <Route path="/recipes" element={<RecipesPage />} />
           </Routes>
         </div>
       </BrowserRouter>

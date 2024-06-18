@@ -4,6 +4,8 @@ import {
   CardBody,
   Typography,
 } from "@material-tailwind/react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function CardGrid(props: {
   data: {
@@ -19,7 +21,7 @@ function CardGrid(props: {
         return (
           <a href={card.link} target="_blank">
             <Card
-              className="bg-grey drop-shadow-2xl overflow-hidden"
+              className="bg-grey overflow-hidden"
               style={{
                 backgroundImage:
                   "radial-gradient(125% 125% at 50% 50%, transparent 0%, grey)",
@@ -27,21 +29,22 @@ function CardGrid(props: {
             >
               <CardHeader
                 floated={false}
-                shadow={true}
+                shadow={false}
                 color="transparent"
                 className="relative m-0 rounded-none"
               >
-                <img
+                <LazyLoadImage
                   className="object-cover aspect-[16/9]"
                   src={card.image}
                   alt="img-blur-shadow"
+                  effect="blur"
                 />
               </CardHeader>
-              <CardBody>
+              <CardBody className="h-[180px]">
                 <Typography
                   variant="h4"
                   color="blue-gray"
-                  className="mb-2 line-clamp-2 text-blue-gray-900 dark:text-gray-100 h-[72px]"
+                  className="mb-2 line-clamp-2 text-blue-gray-900 dark:text-gray-100 max-h-[72px]"
                 >
                   {card.title}
                 </Typography>

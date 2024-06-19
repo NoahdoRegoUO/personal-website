@@ -1,7 +1,14 @@
 import gamePlaceholderImage from "../assets/images/games/game-placeholder.png";
 import ufoImage from "../assets/images/games/ufo-thumbnail.png";
+import terribleTaxiImage from "../assets/images/games/terrible-taxi.png";
 
 const gameData = [
+  {
+    title: "Terrible Taxi",
+    image: terribleTaxiImage,
+    desc: "A low-poly cartoonish game about being an abysmal taxi driver",
+    link: "https://itsdeego.itch.io/terrible-taxi",
+  },
   {
     title: "U.F.O.",
     image: ufoImage,

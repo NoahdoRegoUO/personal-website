@@ -3,8 +3,9 @@ import { TypeAnimation } from "react-type-animation";
 import { BsChevronCompactDown } from "react-icons/bs";
 import { motion } from "framer-motion";
 
-import { Title } from "../index.ts";
 import headshotImage from "../assets/images/misc/headshot.png";
+import project1Image from "../assets/images/misc/sideline_background.png";
+import project2Image from "../assets/images/games/terrible-taxi.png";
 
 // Components
 import { ContactIcons } from "../index.ts";
@@ -162,21 +163,42 @@ function Home() {
               transition={{ duration: 1 }}
               className="rounded-xl w-[60vw] md:h-[400px] lg:h-[600px] h-[300px]"
             >
-              <img
-                src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
-                alt="image 1"
-                className="h-full w-full object-cover"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
-                alt="image 2"
-                className="h-full w-full object-cover"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
-                alt="image 3"
-                className="h-full w-full object-cover"
-              />
+              <figure className="relative h-full w-full">
+                <img
+                  src={project1Image}
+                  alt="image 1"
+                  className="h-full w-full object-cover"
+                />
+                <figcaption className="absolute bottom-0 left-2/4 flex w-full -translate-x-2/4 justify-center text-center bg-gray-900 py-4 px-6 pb-10 shadow-lg saturate-200 backdrop-blur-sm">
+                  <div>
+                    <Typography variant="h2" color="white">
+                      Sideline
+                    </Typography>
+                    <Typography color="white" className="mt-2 font-normal">
+                      A program that automatically generates sports highlight
+                      videos
+                    </Typography>
+                  </div>
+                </figcaption>
+              </figure>
+              <figure className="relative h-full w-full">
+                <img
+                  src={project2Image}
+                  alt="image 2"
+                  className="h-full w-full object-cover"
+                />
+                <figcaption className="absolute bottom-0 left-2/4 flex w-full -translate-x-2/4 justify-center text-center bg-amber-400 py-4 px-6 pb-10 shadow-lg saturate-200 backdrop-blur-sm">
+                  <div>
+                    <Typography variant="h2" color="blue-gray">
+                      Terrible Taxi
+                    </Typography>
+                    <Typography color="gray" className="mt-2 font-normal">
+                      A low-poly cartoonish game about being an abysmal taxi
+                      driver
+                    </Typography>
+                  </div>
+                </figcaption>
+              </figure>
             </Carousel>
           </div>
         </div>

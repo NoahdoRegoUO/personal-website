@@ -1,195 +1,80 @@
-import { useState, useEffect, createElement } from "react";
-import { useNavigate, Outlet } from "react-router-dom";
-import { useMediaQuery } from "react-responsive";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Outlet } from "react-router-dom";
 import {
   Navbar,
   Collapse,
   Typography,
   IconButton,
-  List,
-  ListItem,
-  Menu,
-  MenuHandler,
-  MenuList,
-  MenuItem,
 } from "@material-tailwind/react";
 import {
-  ChevronDownIcon,
   Bars3Icon,
   XMarkIcon,
   BookOpenIcon,
-  Square3Stack3DIcon,
   WrenchIcon,
   HomeIcon,
   MoonIcon,
   SunIcon,
 } from "@heroicons/react/24/outline";
-import { LuChefHat, LuGamepad2 } from "react-icons/lu";
-import { BsGlobe } from "react-icons/bs";
-
-const colors: { [index: string]: string } = {
-  blue: "bg-blue-50 text-blue-500",
-  orange: "bg-orange-50 text-orange-500",
-  green: "bg-green-50 text-green-500",
-  "blue-gray": "bg-blue-gray-50 text-blue-gray-500",
-  purple: "bg-purple-50 text-purple-500",
-  teal: "bg-teal-50 text-teal-500",
-  cyan: "bg-cyan-50 text-cyan-500",
-  pink: "bg-pink-50 text-pink-500",
-};
-
-const navListMenuItems = [
-  {
-    color: "blue",
-    icon: BookOpenIcon,
-    title: "Blog",
-    description: "Incoherent writing covering various topics.",
-    page: "blog",
-  },
-  {
-    color: "orange",
-    icon: LuGamepad2,
-    title: "Games",
-    description: 'My "polished" Unity games.',
-    page: "games",
-  },
-  {
-    color: "purple",
-    icon: LuChefHat,
-    title: "Recipes",
-    description: "Some food that I've thrown together.",
-    page: "recipes",
-  },
-];
-
-function NavListMenu() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const renderItems = navListMenuItems.map(
-    ({ icon, title, description, color, page }, key) => (
-      <a href={page} key={key}>
-        <MenuItem className="flex items-center gap-3 rounded-lg">
-          <div className={`rounded-lg p-5 ${colors[color]}`}>
-            {createElement(icon, {
-              strokeWidth: 2,
-              className: "h-6 w-6",
-            })}
-          </div>
-          <div>
-            <Typography
-              variant="h6"
-              color="blue-gray"
-              className="flex items-center text-sm"
-            >
-              {title}
-            </Typography>
-            <Typography variant="small" color="gray" className="font-normal">
-              {description}
-            </Typography>
-          </div>
-        </MenuItem>
-      </a>
-    )
-  );
-
-  return (
-    <>
-      <Menu
-        open={isMenuOpen}
-        handler={setIsMenuOpen}
-        offset={{ mainAxis: 20 }}
-        placement="bottom"
-        allowHover={true}
-      >
-        <MenuHandler>
-          <Typography
-            as="div"
-            variant="small"
-            className="font-semibold"
-            color="blue-gray"
-          >
-            <ListItem
-              className="flex items-center gap-2 py-2 pr-4"
-              selected={isMenuOpen || isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen((cur) => !cur)}
-            >
-              <Square3Stack3DIcon className="h-[18px] w-[18px]" />
-              Resources
-              <ChevronDownIcon
-                strokeWidth={2.5}
-                className={`hidden h-3 w-3 transition-transform md:block ${
-                  isMenuOpen ? "rotate-180" : ""
-                }`}
-              />
-              <ChevronDownIcon
-                strokeWidth={2.5}
-                className={`block h-3 w-3 transition-transform md:hidden ${
-                  isMobileMenuOpen ? "rotate-180" : ""
-                }`}
-              />
-            </ListItem>
-          </Typography>
-        </MenuHandler>
-        <MenuList className="hidden max-w-screen-xl rounded-xl md:block flex-row border-none">
-          <ul className="grid grid-cols-3 gap-y-2 border-none outline-none">
-            {renderItems}
-          </ul>
-        </MenuList>
-      </Menu>
-      <div className="block md:hidden">
-        <Collapse open={isMobileMenuOpen}>{renderItems}</Collapse>
-      </div>
-    </>
-  );
-}
+import { LuGamepad2 } from "react-icons/lu";
 
 function NavList() {
   return (
-    <List className="mt-4 mb-6 p-0 md:mt-0 md:mb-0 md:flex-row md:p-1">
-      <Typography
-        as="a"
-        href="/#"
-        variant="small"
-        color="blue-gray"
-        className="font-semibold"
+    <div className="flex items-start gap-5">
+      <motion.a
+        href="/"
+        className="font-semibold flex items-center gap-2 text-[#242424] dark:text-[#F5F5F5]"
+        whileHover={{
+          y: -2,
+          transition: { duration: 0.1 },
+        }}
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4">
-          <HomeIcon className="h-[18px] w-[18px]" />
-          Home
-        </ListItem>
-      </Typography>
-
-      <Typography
-        as="a"
+        <HomeIcon className="h-[18px] w-[18px]" />
+        Home
+      </motion.a>
+      <div className="h-6 rounded-full border-r-[1px] border-current"></div>
+      <motion.a
         href="projects"
-        variant="small"
-        color="blue-gray"
-        className="font-semibold"
+        className="font-semibold flex items-center gap-2 text-[#242424] dark:text-[#F5F5F5]"
+        whileHover={{
+          y: -2,
+          transition: { duration: 0.1 },
+        }}
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4">
-          <WrenchIcon className="h-[18px] w-[18px]" />
-          Projects
-        </ListItem>
-      </Typography>
-
-      <NavListMenu />
-    </List>
+        <WrenchIcon className="h-[18px] w-[18px]" />
+        Projects
+      </motion.a>
+      <div className="h-6 rounded-full border-r-[1px] border-current"></div>
+      <motion.a
+        href="games"
+        className="font-semibold flex items-center gap-2 text-[#242424] dark:text-[#F5F5F5]"
+        whileHover={{
+          y: -2,
+          transition: { duration: 0.1 },
+        }}
+      >
+        <LuGamepad2 className="h-[18px] w-[18px]" />
+        Games
+      </motion.a>
+      <div className="h-6 rounded-full border-r-[1px] border-current"></div>
+      <motion.a
+        href="blog"
+        className="font-semibold flex items-center gap-2 text-[#242424] dark:text-[#F5F5F5]"
+        whileHover={{
+          y: -2,
+          transition: { duration: 0.1 },
+        }}
+      >
+        <BookOpenIcon className="h-[18px] w-[18px]" />
+        Blog
+      </motion.a>
+    </div>
   );
 }
 
 export default function MainNavBar() {
   const [openNav, setOpenNav] = useState(false);
-  const [darkMode, setDarkMode] = useState(true);
-  const navigate = useNavigate();
-
-  useMediaQuery(
-    {
-      query: "(prefers-color-scheme: dark)",
-    },
-    undefined,
-    (isSystemDark) => setDarkMode(isSystemDark)
-  );
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     window.addEventListener(
@@ -207,31 +92,13 @@ export default function MainNavBar() {
   }, [darkMode]);
 
   return (
-    <>
-      <Navbar className="max-w-full px-4 py-2 rounded-none border-none bg-gradient-to-r from-green-300 to-blue-200">
-        <div className="flex items-center justify-between text-blue-gray-900 select-none">
-          <div className="flex items-start">
-            <Typography
-              as="a"
-              href="/#"
-              variant="h6"
-              className="mr-4 cursor-pointer py-1.5 ml-2"
-              onClick={() => navigate("/")}
-            >
-              <BsGlobe className="h-[30px] w-[30px]" />
-            </Typography>
-            <Typography
-              variant="h6"
-              className="mr-4 cursor-pointer py-1.5 ml-2"
-              onClick={() => setDarkMode(!darkMode)}
-            >
-              {darkMode ? (
-                <MoonIcon className="h-[30px] w-[30px]" />
-              ) : (
-                <SunIcon className="h-[30px] w-[30px]" />
-              )}
-            </Typography>
-          </div>
+    <div className="fixed top-0 z-50 flex items-center justify-between w-full">
+      <Navbar
+        className="max-w-full p-3 rounded-none border-none bg-[#F5F5F5] dark:bg-[#242424]"
+        blurred={false}
+        shadow={false}
+      >
+        <div className="text-blue-gray-900 dark:text-white h-fit select-none flex items-center justify-between">
           <div className="hidden md:block">
             <NavList />
           </div>
@@ -247,12 +114,25 @@ export default function MainNavBar() {
               <Bars3Icon className="h-6 w-6" strokeWidth={2} />
             )}
           </IconButton>
+          <div className="justify-end flex">
+            <Typography
+              variant="h6"
+              className="mr-2 cursor-pointer"
+              onClick={() => setDarkMode(!darkMode)}
+            >
+              {darkMode ? (
+                <MoonIcon className="h-[30px] w-[30px] text-white" />
+              ) : (
+                <SunIcon className="h-[30px] w-[30px]" />
+              )}
+            </Typography>
+          </div>
         </div>
-        <Collapse open={openNav}>
+        <Collapse open={openNav} className="flex justify-center ">
           <NavList />
         </Collapse>
       </Navbar>
       <Outlet />
-    </>
+    </div>
   );
 }

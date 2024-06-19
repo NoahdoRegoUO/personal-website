@@ -4,8 +4,15 @@ import trendImage from "../assets/images/projects/trend.jpg";
 import personalWebsiteImage from "../assets/images/projects/personal-website.jpg";
 import unityImage from "../assets/images/projects/unity-art-2023.jpg";
 import pyFileConvImage from "../assets/images/projects/py-file-convert-thumbnail.png";
+import sidelineImage from "../assets/images/projects/sideline.png";
 
 const projectsData = [
+  {
+    title: "Sideline",
+    image: sidelineImage,
+    desc: "A program that automatically generates sports highlight videos",
+    link: "https://github.com/NoahdoRegoUO/Sideline",
+  },
   {
     title: "Python File Converter",
     image: pyFileConvImage,

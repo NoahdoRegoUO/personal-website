@@ -1,32 +1,55 @@
-import {
-  Typography,
-  Progress,
-  Card,
-  CardHeader,
-  CardBody,
-} from "@material-tailwind/react";
+import { Typography, Carousel } from "@material-tailwind/react";
 import { TypeAnimation } from "react-type-animation";
+import { BsChevronCompactDown } from "react-icons/bs";
+import { motion } from "framer-motion";
+
+import headshotImage from "../assets/images/misc/headshot.png";
+import project1Image from "../assets/images/misc/sideline_background.png";
+import project2Image from "../assets/images/games/terrible-taxi.png";
 
 // Components
-import { ContactIcons, ExperienceIcons } from "../index.ts";
-
-// Data
-import { featuredItemsData } from "../index.ts";
+import { ContactIcons } from "../index.ts";
 
 function Home() {
   return (
-    <>
-      <div className="lg:flex items-start justify-between">
+    <div
+      className="md:snap-y md:snap-mandatory overflow-y-auto overflow-x-hidden max-h-screen"
+      style={{
+        backgroundImage:
+          "radial-gradient(125% 125% at 50% 0%, transparent 50%, grey)",
+        scrollbarWidth: "none",
+      }}
+      id="container"
+    >
+      <div className="flex md:h-[90vh] h-[30vh] md:mt-0 mt-8 items-center justify-center snap-start">
+        {/* PHOTO */}
+        <div className="w-1/4 max-w-md">
+          <img
+            className="rounded-full object-center"
+            src={headshotImage}
+            alt="headshot image"
+          />
+        </div>
+        {/* SPACER */}
+        <span style={{ width: "3vw" }} />
+        {/* TITLE */}
         <div className="min-w-fit max-w-fit">
-          <Typography variant="h1" className="ml-10 mt-5 text-5xl sm:text-6xl">
+          <Typography
+            variant="h1"
+            className="mt-5 font-extrabold"
+            style={{ fontSize: "6vw" }}
+          >
             Noah do Régo
           </Typography>
-          <Typography variant="lead" className="ml-10 mt-1 text-md">
+          <Typography
+            variant="lead"
+            className="text-md font-light"
+            style={{ fontSize: "3vw" }}
+          >
             <TypeAnimation
               sequence={[
-                // Same substring at the start will only be typed out once, initially
                 "University Student ",
-                1500, // wait 1s before replacing "Mice" with "Hamsters"
+                1500,
                 "Developer ",
                 1500,
                 "Creator ",
@@ -38,145 +61,149 @@ function Home() {
               ]}
               wrapper="span"
               speed={50}
-              style={{ fontSize: "2em", display: "inline-block" }}
+              style={{ display: "inline-block" }}
               repeat={Infinity}
             />
           </Typography>
-          <div className="flex items-center gap-3 sm:gap-8 max-w-full justify-left ml-10 mt-5">
+          <div className="flex items-center gap-3 sm:gap-8 max-w-full justify-left mt-[2vw]">
             <ContactIcons />
           </div>
         </div>
-        <div className="max-w-full mt-5 mx-10">
+      </div>
+      <div className="md:flex left-auto bottom-0 w-screen h-[10vh] hidden justify-center">
+        <motion.div
+          style={{ cursor: "pointer" }}
+          animate={{
+            y: [null, -10, 0],
+          }}
+          transition={{
+            duration: 2,
+            ease: "easeInOut",
+            times: [0, 0.5, 1],
+            repeat: Infinity,
+            repeatDelay: 0,
+          }}
+        >
+          <BsChevronCompactDown
+            className="h-[4vw] w-[4vw] text-black dark:text-white"
+            onClick={() => {
+              const bio_div = document.getElementById("bio");
+              const container = document.getElementById("container");
+              container?.scrollTo({
+                top: bio_div?.offsetTop,
+                behavior: "smooth",
+              });
+            }}
+          />
+        </motion.div>
+      </div>
+      <div className="flex md:h-[90vh] h-[20vh] snap-start">
+        <div id="bio" className="flex items-center justify-center">
           <Typography
             variant="paragraph"
-            className="text-base md:text-lg lg:text-2xl"
+            className="text-md md:w-3/5 w-4/5 font-light"
+            style={{ fontSize: "2vw" }}
           >
-            Hey! I'm Noah- a university student with experience in full-stack
-            development, game development and mobile development. I'm interested
-            in AI, robotics, and modern technology in general. I'll always be
-            working on one project or another, feel free to reach out!
+            Hey! 👋🏽 I'm Noah- a
+            <b className="font-extrabold"> computer science student</b> 👨🏽‍💻
+            currently studying at the <i>University of Ottawa</i> 🏛️. I have
+            experience in{" "}
+            <b className="font-extrabold">full-stack development</b> 💻,{" "}
+            <b className="font-extrabold">game development</b> 🎮 and more. I'm
+            interested in <b className="font-extrabold">AI</b> 🧠,{" "}
+            <b className="font-extrabold">robotics</b> 🦾, and{" "}
+            <b className="font-extrabold">modern technology</b> 💡 in general.
+            I'll always be working on one project or another, feel free to reach
+            out!
           </Typography>
         </div>
       </div>
-      <hr className="mx-10 my-5 rounded border-blue-gray-600 dark:border-white" />
-      <div className="lg:flex lg:items-start lg:justify-start lg:gap-10 mx-10">
+      <div className="md:flex hidden left-auto bottom-0 w-screen h-[10vh] justify-center">
+        <motion.div
+          style={{ cursor: "pointer" }}
+          animate={{
+            y: [null, -10, 0],
+          }}
+          transition={{
+            duration: 2,
+            ease: "easeInOut",
+            times: [0, 0.5, 1],
+            repeat: Infinity,
+            repeatDelay: 0,
+          }}
+        >
+          <BsChevronCompactDown
+            className="h-[4vw] w-[4vw] text-black dark:text-white"
+            onClick={() => {
+              const projects_div = document.getElementById("project-gallery");
+              const container = document.getElementById("container");
+              container?.scrollTo({
+                top: projects_div?.offsetTop,
+                behavior: "smooth",
+              });
+            }}
+          />
+        </motion.div>
+      </div>
+      <div className="md:h-screen h-[50vh] flex items-center justify-center snap-start">
         <div>
-          {/* Skills Section */}
-          <Typography variant="h3" className="ml-1 text-2xl xl:text-3xl">
-            Skills
+          <Typography
+            variant="h1"
+            className="font-extrabold text-center"
+            style={{ fontSize: "3.5vw" }}
+          >
+            Featured Projects
           </Typography>
-          <div className="justify-start">
-            <div className="items-start gap-5 mb-10 lg:mb-0">
-              <Typography variant="h5" className="ml-1 mt-5 text-lg md:text-xl">
-                Frontend Development
-              </Typography>
-              <Progress
-                className="lg:w-[35vw] mt-2 bg-blue-gray-600"
-                value={80}
-                size="lg"
-              />
-              <Typography variant="h5" className="ml-1 mt-5 text-lg md:text-xl">
-                Backend Development
-              </Typography>
-              <Progress
-                className="lg:w-[35vw] mt-2 bg-blue-gray-600"
-                value={65}
-                size="lg"
-              />
-              <Typography variant="h5" className="ml-1 mt-5 text-lg md:text-xl">
-                Game Development
-              </Typography>
-              <Progress
-                className="lg:w-[35vw] mt-2 bg-blue-gray-600"
-                value={85}
-                size="lg"
-              />
-              <Typography variant="h5" className="ml-1 mt-5 text-lg md:text-xl">
-                Mobile Development
-              </Typography>
-              <Progress
-                className="lg:w-[35vw] mt-2 bg-blue-gray-600"
-                value={68}
-                size="lg"
-              />
-            </div>
-          </div>
-          {/* Experirence Section */}
-          <Typography variant="h3" className="ml-1 mt-10 text-2xl xl:text-3xl">
-            Work Experience
-          </Typography>
-          <div className="flex items-center gap-4 w-full justify-left mt-5 mb-10 md:mb-0">
-            <ExperienceIcons />
-          </div>
-        </div>
-        <div className="sm:grid sm:grid-cols-2 sm:items-start sm:gap-x-5 items-center">
-          {/* Featured Project */}
-          <div>
-            <Typography variant="h3" className="ml-1 mb-5 text-2xl xl:text-3xl">
-              Featured Project
-            </Typography>
-            <a href={featuredItemsData.project.link} target="_blank">
-              <Card className="mb-10 sm:mb-0 outline outline-1 dark:outline-0 dark:bg-blue-gray-800 drop-shadow-2xl">
-                <CardHeader
-                  floated={false}
-                  color="blue-gray"
-                  className="relative"
-                >
-                  <img
-                    className="object-cover aspect-[16/9]"
-                    src={featuredItemsData.project.image}
-                    alt="img-blur-shadow"
-                  />
-                </CardHeader>
-                <CardBody>
-                  <Typography
-                    variant="h4"
-                    className="mb-2 line-clamp-2 text-blue-gray-900 dark:text-gray-100 h-[72px]"
-                  >
-                    {featuredItemsData.project.title}
-                  </Typography>
-                  <Typography className="text-lg line-clamp-2 text-blue-gray-900 dark:text-gray-300">
-                    {featuredItemsData.project.desc}
-                  </Typography>
-                </CardBody>
-              </Card>
-            </a>
-          </div>
-          {/* Featured Video */}
-          <div>
-            <Typography variant="h3" className="ml-1 mb-5 text-2xl xl:text-3xl">
-              Featured Video
-            </Typography>
-            <a href={featuredItemsData.video.link} target="_blank">
-              <Card className="mb-10 sm:mb-0 outline outline-1 dark:outline-0 dark:bg-blue-gray-800 drop-shadow-2xl">
-                <CardHeader
-                  floated={false}
-                  color="blue-gray"
-                  className="relative"
-                >
-                  <img
-                    className="object-cover aspect-[16/9]"
-                    src={featuredItemsData.video.image}
-                    alt="img-blur-shadow"
-                  />
-                </CardHeader>
-                <CardBody>
-                  <Typography
-                    variant="h4"
-                    className="mb-2 line-clamp-2 text-blue-gray-900 dark:text-gray-300 h-[72px]"
-                  >
-                    {featuredItemsData.video.title}
-                  </Typography>
-                  <Typography className="text-lg line-clamp-2 text-blue-gray-900 dark:text-gray-300">
-                    {featuredItemsData.video.desc}
-                  </Typography>
-                </CardBody>
-              </Card>
-            </a>
+          <hr className="mx-[50vw] w-24 mb-7 rounded border-blue-gray-600 dark:border-white" />
+          <div
+            id="project-gallery"
+            className="flex items-center justify-center w-full"
+          >
+            <Carousel
+              transition={{ duration: 1 }}
+              className="rounded-xl w-[60vw] md:h-[400px] lg:h-[600px] h-[300px]"
+            >
+              <figure className="relative h-full w-full">
+                <img
+                  src={project1Image}
+                  alt="image 1"
+                  className="h-full w-full object-cover"
+                />
+                <figcaption className="absolute bottom-0 left-2/4 flex w-full -translate-x-2/4 justify-center text-center bg-gray-900 py-4 px-6 pb-10 shadow-lg saturate-200 backdrop-blur-sm">
+                  <div>
+                    <Typography variant="h2" color="white">
+                      Sideline
+                    </Typography>
+                    <Typography color="white" className="mt-2 font-normal">
+                      A program that automatically generates sports highlight
+                      videos
+                    </Typography>
+                  </div>
+                </figcaption>
+              </figure>
+              <figure className="relative h-full w-full">
+                <img
+                  src={project2Image}
+                  alt="image 2"
+                  className="h-full w-full object-cover"
+                />
+                <figcaption className="absolute bottom-0 left-2/4 flex w-full -translate-x-2/4 justify-center text-center bg-amber-400 py-4 px-6 pb-10 shadow-lg saturate-200 backdrop-blur-sm">
+                  <div>
+                    <Typography variant="h2" color="blue-gray">
+                      Terrible Taxi
+                    </Typography>
+                    <Typography color="gray" className="mt-2 font-normal">
+                      A low-poly cartoonish game about being an abysmal taxi
+                      driver
+                    </Typography>
+                  </div>
+                </figcaption>
+              </figure>
+            </Carousel>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -1,6 +1,5 @@
 import bookerImage from "../assets/images/projects/booker.png";
 import onedayImage from "../assets/images/projects/oneday.png";
-import trendImage from "../assets/images/projects/trend.jpg";
 import personalWebsiteImage from "../assets/images/projects/personal-website.jpg";
 import unityImage from "../assets/images/projects/unity-art-2023.jpg";
 import pyFileConvImage from "../assets/images/projects/py-file-convert-thumbnail.png";
@@ -36,12 +35,6 @@ const projectsData = [
     image: bookerImage,
     desc: "A fullstack application for booking hotels made with a friend as a university project (private repo)",
     link: "https://github.com/NoahdoRegoUO/Booker",
-  },
-  {
-    title: "Trend [In development]",
-    image: trendImage,
-    desc: "A mobile app that displays trending content from other platforms made with React Native (private repo)",
-    link: undefined,
   },
   {
     title: "Unity Games",

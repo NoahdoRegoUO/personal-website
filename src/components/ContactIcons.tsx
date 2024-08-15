@@ -10,7 +10,7 @@ import {
 function ContactIcons() {
   return (
     <div className="flex justify-between" style={{ gap: "2vw" }}>
-      <a href="https://github.com/NoahdoRegoUO" target="_blank">
+      <a href="https://github.com/noah-dorego" target="_blank">
         <div className="rounded-full w-[4.5vw] h-[4.5vw] bg-[#000000] flex justify-center items-center">
           <FiGithub className="h-[2vw] w-[2vw] text-white" />
         </div>

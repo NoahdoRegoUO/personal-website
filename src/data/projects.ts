@@ -10,13 +10,13 @@ const projectsData = [
     title: "Sideline",
     image: sidelineImage,
     desc: "A program that automatically generates sports highlight videos",
-    link: "https://github.com/NoahdoRegoUO/Sideline",
+    link: "https://github.com/noah-dorego/Sideline",
   },
   {
     title: "Python File Converter",
     image: pyFileConvImage,
     desc: "A python program for converting file formats using ffmpeg",
-    link: "https://github.com/NoahdoRegoUO/python-file-converter",
+    link: "https://github.com/noah-dorego/python-file-converter",
   },
   {
     title: "Personal Website",
@@ -34,7 +34,7 @@ const projectsData = [
     title: "Booker",
     image: bookerImage,
     desc: "A fullstack application for booking hotels made with a friend as a university project (private repo)",
-    link: "https://github.com/NoahdoRegoUO/Booker",
+    link: "https://github.com/noah-dorego/Booker",
   },
   {
     title: "Unity Games",

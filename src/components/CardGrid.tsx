@@ -4,7 +4,7 @@ import {
   CardBody,
   Typography,
 } from "@material-tailwind/react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Suspense } from "react";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 function CardGrid(props: {
@@ -33,12 +33,17 @@ function CardGrid(props: {
                 color="transparent"
                 className="relative m-0 rounded-none"
               >
-                <LazyLoadImage
-                  className="object-cover aspect-[16/9]"
-                  src={card.image}
-                  alt="img-blur-shadow"
-                  effect="blur"
-                />
+                <Suspense
+                  fallback={
+                    <div className="object-cover aspect-[16/9] bg-gray-700"></div>
+                  }
+                >
+                  <img
+                    className="object-cover aspect-[16/9]"
+                    src={card.image}
+                    alt="img-blur-shadow"
+                  />
+                </Suspense>
               </CardHeader>
               <CardBody className="h-[180px]">
                 <Typography

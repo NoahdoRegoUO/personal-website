@@ -21,7 +21,7 @@ function Home() {
       }}
       id="container"
     >
-      <div className="inline md:flex md:h-[90vh] h-[30vh] mt-8 md:mt-0 items-center justify-center snap-start">
+      <div className="inline md:flex md:h-[90vh] h-[600px] mt-8 md:mt-0 items-center justify-center snap-start">
         {/* PHOTO */}
         <div className="w-1/2 md:w-1/4 max-w-md ml-auto md:ml-0 mr-auto md:mr-0 mt-[10vh]">
           <img
@@ -36,7 +36,7 @@ function Home() {
         <div className="min-w-fit max-w-fit ml-auto md:ml-0 mr-auto md:mr-0 mt-0 md:mt-[8vh] mb-[100px] md:mb-0">
           <Typography
             variant="h1"
-            className="mt-5 font-extrabold text-[44px] md:text-[6vw]"
+            className="mt-5 font-extrabold text-[36px] sm:text-[44px] md:text-[6vw]"
           >
             Noah do Régo
           </Typography>
@@ -99,7 +99,7 @@ function Home() {
         <div id="bio" className="flex items-center justify-center">
           <Typography
             variant="paragraph"
-            className="sm:text-[16px] md:text-[20px] lg:text-[24px] xl:text-[28px] w-4/5 lg:w-3/5 font-light text-justify mb-[100px] md:mb-0"
+            className="sm:text-[16px] md:text-[20px] lg:text-[24px] xl:text-[28px] w-4/5 lg:w-3/5 font-light text-justify"
           >
             Hey! 👋🏽 I'm Noah- a
             <b className="font-extrabold"> computer science student</b> 👨🏽‍💻
@@ -142,7 +142,7 @@ function Home() {
           />
         </motion.div>
       </div>
-      <div className="md:h-screen h-[50vh] flex items-center justify-center snap-start">
+      <div className="md:h-screen h-[50vh] flex items-center justify-center snap-start mt-[100px] md:mt-0">
         <div>
           <Typography
             variant="h1"

@@ -33,7 +33,7 @@ function Home() {
         {/* SPACER */}
         <span style={{ width: "3vw" }} />
         {/* TITLE */}
-        <div className="min-w-fit max-w-fit ml-auto md:ml-0 mr-auto md:mr-0 mt-0 md:mt-[8vh] mb-[3vh] md:mb-0">
+        <div className="min-w-fit max-w-fit ml-auto md:ml-0 mr-auto md:mr-0 mt-0 md:mt-[8vh] mb-[100px] md:mb-0">
           <Typography
             variant="h1"
             className="mt-5 font-extrabold text-[44px] md:text-[6vw]"
@@ -99,7 +99,7 @@ function Home() {
         <div id="bio" className="flex items-center justify-center">
           <Typography
             variant="paragraph"
-            className="sm:text-[16px] md:text-[20px] lg:text-[24px] xl:text-[28px] w-4/5 lg:w-3/5 font-light text-justify"
+            className="sm:text-[16px] md:text-[20px] lg:text-[24px] xl:text-[28px] w-4/5 lg:w-3/5 font-light text-justify mb-[100px] md:mb-0"
           >
             Hey! 👋🏽 I'm Noah- a
             <b className="font-extrabold"> computer science student</b> 👨🏽‍💻

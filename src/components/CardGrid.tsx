@@ -31,7 +31,7 @@ function CardGrid(props: {
                 floated={false}
                 shadow={false}
                 color="transparent"
-                className="relative m-0 rounded-none"
+                className="relative m-0 rounded-none min-h-[20vh]"
               >
                 <Suspense
                   fallback={

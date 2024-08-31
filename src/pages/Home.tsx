@@ -21,9 +21,9 @@ function Home() {
       }}
       id="container"
     >
-      <div className="flex md:h-[90vh] h-[30vh] md:mt-0 mt-8 items-center justify-center snap-start">
+      <div className="inline md:flex md:h-[90vh] h-[30vh] mt-8 md:mt-0 items-center justify-center snap-start">
         {/* PHOTO */}
-        <div className="w-1/4 max-w-md">
+        <div className="w-1/2 md:w-1/4 max-w-md ml-auto md:ml-0 mr-auto md:mr-0 mt-[10vh]">
           <img
             className="rounded-full object-center"
             src={headshotImage}
@@ -33,18 +33,16 @@ function Home() {
         {/* SPACER */}
         <span style={{ width: "3vw" }} />
         {/* TITLE */}
-        <div className="min-w-fit max-w-fit">
+        <div className="min-w-fit max-w-fit ml-auto md:ml-0 mr-auto md:mr-0 mt-0 md:mt-[8vh] mb-[3vh] md:mb-0">
           <Typography
             variant="h1"
-            className="mt-5 font-extrabold"
-            style={{ fontSize: "6vw" }}
+            className="mt-5 font-extrabold text-[44px] md:text-[6vw]"
           >
             Noah do Régo
           </Typography>
           <Typography
             variant="lead"
-            className="text-md font-light"
-            style={{ fontSize: "3vw" }}
+            className="text-md font-light text-[22px] md:text-[3vw] text-center md:text-start"
           >
             <TypeAnimation
               sequence={[
@@ -65,7 +63,7 @@ function Home() {
               repeat={Infinity}
             />
           </Typography>
-          <div className="flex items-center gap-3 sm:gap-8 max-w-full justify-left mt-[2vw]">
+          <div className="flex items-center gap-3 sm:gap-8 max-w-full justify-center md:justify-start mt-[2vw]">
             <ContactIcons />
           </div>
         </div>
@@ -101,8 +99,7 @@ function Home() {
         <div id="bio" className="flex items-center justify-center">
           <Typography
             variant="paragraph"
-            className="text-md md:w-3/5 w-4/5 font-light"
-            style={{ fontSize: "2vw" }}
+            className="sm:text-[16px] md:text-[20px] lg:text-[24px] xl:text-[28px] w-4/5 lg:w-3/5 font-light text-justify"
           >
             Hey! 👋🏽 I'm Noah- a
             <b className="font-extrabold"> computer science student</b> 👨🏽‍💻
@@ -161,44 +158,48 @@ function Home() {
           >
             <Carousel
               transition={{ duration: 1 }}
-              className="rounded-xl w-[60vw] md:h-[400px] lg:h-[600px] h-[300px]"
+              className="rounded-xl w-[80vw] lg:w-[60vw] md:h-[400px] lg:h-[600px] h-[300px]"
             >
-              <figure className="relative h-full w-full">
-                <img
-                  src={project1Image}
-                  alt="image 1"
-                  className="h-full w-full object-cover"
-                />
-                <figcaption className="absolute bottom-0 left-2/4 flex w-full -translate-x-2/4 justify-center text-center bg-gray-900 py-4 px-6 pb-10 shadow-lg saturate-200 backdrop-blur-sm">
-                  <div>
-                    <Typography variant="h2" color="white">
-                      Sideline
-                    </Typography>
-                    <Typography color="white" className="mt-2 font-normal">
-                      A program that automatically generates sports highlight
-                      videos
-                    </Typography>
-                  </div>
-                </figcaption>
-              </figure>
-              <figure className="relative h-full w-full">
-                <img
-                  src={project2Image}
-                  alt="image 2"
-                  className="h-full w-full object-cover"
-                />
-                <figcaption className="absolute bottom-0 left-2/4 flex w-full -translate-x-2/4 justify-center text-center bg-amber-400 py-4 px-6 pb-10 shadow-lg saturate-200 backdrop-blur-sm">
-                  <div>
-                    <Typography variant="h2" color="blue-gray">
-                      Terrible Taxi
-                    </Typography>
-                    <Typography color="gray" className="mt-2 font-normal">
-                      A low-poly cartoonish game about being an abysmal taxi
-                      driver
-                    </Typography>
-                  </div>
-                </figcaption>
-              </figure>
+              <a href="https://github.com/noah-dorego/Sideline">
+                <figure className="relative h-full w-full">
+                  <img
+                    src={project1Image}
+                    alt="image 1"
+                    className="h-full w-full object-cover"
+                  />
+                  <figcaption className="absolute bottom-0 left-2/4 flex w-full -translate-x-2/4 justify-center text-center bg-gray-900/50 py-4 px-6 pb-10 shadow-lg saturate-200 backdrop-blur-sm">
+                    <div>
+                      <Typography variant="h2" color="white">
+                        Sideline
+                      </Typography>
+                      <Typography className="mt-2 font-normal" color="white">
+                        A program that automatically generates sports highlight
+                        videos
+                      </Typography>
+                    </div>
+                  </figcaption>
+                </figure>
+              </a>
+              <a href="https://itsdeego.itch.io/terrible-taxi">
+                <figure className="relative h-full w-full">
+                  <img
+                    src={project2Image}
+                    alt="image 2"
+                    className="h-full w-full object-cover"
+                  />
+                  <figcaption className="absolute bottom-0 left-2/4 flex w-full -translate-x-2/4 justify-center text-center bg-gray-900/50 py-4 px-6 pb-10 shadow-lg saturate-200 backdrop-blur-sm">
+                    <div>
+                      <Typography variant="h2" color="white">
+                        Terrible Taxi
+                      </Typography>
+                      <Typography color="white" className="mt-2 font-normal">
+                        A low-poly cartoonish game about being an abysmal taxi
+                        driver
+                      </Typography>
+                    </div>
+                  </figcaption>
+                </figure>
+              </a>
             </Carousel>
           </div>
         </div>

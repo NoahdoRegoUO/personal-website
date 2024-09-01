@@ -20,52 +20,52 @@ import { LuGamepad2 } from "react-icons/lu";
 
 function NavList() {
   return (
-    <div className="flex items-start gap-5">
+    <div className="flex items-start gap-2 sm:gap-5 max-w-full overflow-x-auto">
       <motion.a
         href="/"
-        className="font-semibold flex items-center gap-2 text-[#242424] dark:text-[#F5F5F5]"
+        className="text-sm md:text-md font-semibold flex items-center gap-2 text-[#242424] dark:text-[#F5F5F5]"
         whileHover={{
           y: -2,
           transition: { duration: 0.1 },
         }}
       >
-        <HomeIcon className="h-[18px] w-[18px]" />
+        <HomeIcon className="h-[14x] sm:h-[18px] w-[14px] sm:w-[18px]" />
         Home
       </motion.a>
       <div className="h-6 rounded-full border-r-[1px] border-current"></div>
       <motion.a
         href="projects"
-        className="font-semibold flex items-center gap-2 text-[#242424] dark:text-[#F5F5F5]"
+        className="text-sm md:text-md font-semibold flex items-center gap-2 text-[#242424] dark:text-[#F5F5F5]"
         whileHover={{
           y: -2,
           transition: { duration: 0.1 },
         }}
       >
-        <WrenchIcon className="h-[18px] w-[18px]" />
+        <WrenchIcon className="h-[14x] sm:h-[18px] w-[14px] sm:w-[18px]" />
         Projects
       </motion.a>
       <div className="h-6 rounded-full border-r-[1px] border-current"></div>
       <motion.a
         href="games"
-        className="font-semibold flex items-center gap-2 text-[#242424] dark:text-[#F5F5F5]"
+        className="text-sm md:text-md font-semibold flex items-center gap-2 text-[#242424] dark:text-[#F5F5F5]"
         whileHover={{
           y: -2,
           transition: { duration: 0.1 },
         }}
       >
-        <LuGamepad2 className="h-[18px] w-[18px]" />
+        <LuGamepad2 className="h-[14x] sm:h-[18px] w-[14px] sm:w-[18px]" />
         Games
       </motion.a>
       <div className="h-6 rounded-full border-r-[1px] border-current"></div>
       <motion.a
         href="blog"
-        className="font-semibold flex items-center gap-2 text-[#242424] dark:text-[#F5F5F5]"
+        className="text-sm md:text-md font-semibold flex items-center gap-2 text-[#242424] dark:text-[#F5F5F5]"
         whileHover={{
           y: -2,
           transition: { duration: 0.1 },
         }}
       >
-        <BookOpenIcon className="h-[18px] w-[18px]" />
+        <BookOpenIcon className="h-[14x] sm:h-[18px] w-[14px] sm:w-[18px]" />
         Blog
       </motion.a>
     </div>
